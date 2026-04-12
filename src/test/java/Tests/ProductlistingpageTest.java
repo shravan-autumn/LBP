@@ -41,9 +41,9 @@ public class ProductlistingpageTest extends BaseClass {
 		plp.applyFilters();
 
 		// Scroll to Applied Filter section
-		webdriverUtility.scrollToElement(plp.getFilterHeading());
+		plp.scrollToElement(plp.getFilterHeading());
 		Assert.assertTrue(plp.getClearAllLink().isDisplayed(), "Filters are not applied");
-		driver.navigate().refresh();
+		plp.refreshPage();
 	}
 
 	// Case 3: Verify if relevant products are displayed on applying filters in PLP
@@ -54,7 +54,7 @@ public class ProductlistingpageTest extends BaseClass {
 		pdp= new productDetailsPage(driver);
 		String actualPro = pdp.getProductTitle().getText();
 		Assert.assertEquals(actualPro, productTitle, "Product title mismatch after redirection");
-		driver.navigate().back();
+		plp.navigateBack();
 	}
 
 	// Case 4: Verify if user is able to clear applied filters in PLP page
@@ -62,7 +62,7 @@ public class ProductlistingpageTest extends BaseClass {
 	public void clearFilters() throws Exception {
 		plp.clearFilters();
 		Assert.assertTrue(plp.getClearAllLink().isDisplayed(), "Filters are not cleared");
-		driver.navigate().refresh();
+		plp.refreshPage();
 
 	}
 
@@ -70,18 +70,24 @@ public class ProductlistingpageTest extends BaseClass {
 	@Test(priority = 5)
 	public void addToCartFromPLP() {
 		String product = plp.addToCart();
+		String cartPro = null;
 		cartDrawer c = new cartDrawer(driver);
-		String cartPro = c.getProductTitleCartDrawer().getText();
+		for (WebElement pro : c.getAllproductTitleCartDrawer1()) {
+			if (pro.getText().toLowerCase().contains(product.toLowerCase())) {
+				cartPro = pro.getText();
+				break;
+			}
+		}
 		Assert.assertEquals(cartPro.toLowerCase(), product.toLowerCase(),
 				"Product in cart drawer is not same as the one added to cart");
-		driver.navigate().refresh();
+		plp.refreshPage();
 
 	}
 
 	// case 6: Verify if You May Also Like section is displayed in PLP page
 	@Test(priority = 6)
 	public void youMayAlsoLikeSection() {
-		webdriverUtility.scrollToElement(plp.getYouMayAlsoLikeSection());
+		plp.scrollToElement(plp.getYouMayAlsoLikeSection());
 		Assert.assertTrue(plp.getYouMayAlsoLikeSection().isDisplayed(),
 				"You May Also Like section is not displayed in PLP page");
 	}
@@ -89,7 +95,7 @@ public class ProductlistingpageTest extends BaseClass {
 	// case 7: Verify if beauty Archives section is displayed in PLP page
 	@Test(priority = 7)
 	public void beautyArchivesSection() {
-		webdriverUtility.scrollToElement(plp.getBeautyArchivesSection());
+		plp.scrollToElement(plp.getBeautyArchivesSection());
 		Assert.assertTrue(plp.getBeautyArchivesSection().isDisplayed(),
 				"Beauty Archives section is not displayed in PLP page");
 	}

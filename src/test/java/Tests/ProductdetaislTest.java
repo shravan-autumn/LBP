@@ -35,16 +35,16 @@ public class ProductdetaislTest extends BaseClass {
 	@Test(priority = 2)
 	public void pdpToPlpNavigation() throws InterruptedException {
 		pdp = new productDetailsPage(driver);
-		pdp.getViewAllProductsLink().click();
+		pdp.clickViewAllProducts();
 		String expectedUrl = "https://lovebeautyandplanet.in/collections/all-products";
 		String actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl);
-		driver.navigate().back();
-		pdp.getViewBundleProductsLink().click();
+		pdp.navigateBack();
+		pdp.clickViewBundleProduct();
 		String expectedUrl1 = "https://lovebeautyandplanet.in/collections/bundle-offers";
 		String actualUrl1 = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl1, expectedUrl1);
-		driver.navigate().back();
+		pdp.navigateBack();
 
 	}
 
@@ -79,7 +79,7 @@ public class ProductdetaislTest extends BaseClass {
 		String cartPro = c.getProductTitleCartDrawer().getText();
 		Assert.assertEquals(cartPro.toLowerCase(), product.toLowerCase(),
 				"Product in cart drawer is not same as the one added to cart");
-		c.getCloseCartDrawerButton().click();
+		c.closeCartDrawer();
 	}
 
 	// Case 6: Verify if user is able to increase quantity from PDP page
@@ -90,7 +90,7 @@ public class ProductdetaislTest extends BaseClass {
 		cartDrawer c = new cartDrawer(driver);
 		c.increaseQuantityFromCartDrawer();
 		String cartQuantity = c.getQuantityTextFieldCartDrawer().getAttribute("value");
-		c.getCloseCartDrawerButton().click();
+		c.closeCartDrawer();
 		String quantity = pdp.getQuantityTextField().getAttribute("data-cart-quantity");
 		Assert.assertEquals(quantity, cartQuantity, "Quantity in cart drawer is not same as the one selected in PDP");
 	}
@@ -103,7 +103,7 @@ public class ProductdetaislTest extends BaseClass {
 			pdp.decreaseQuantityFromPDP();
 			c.decreaseQuantityFromCartDrawer();
 			String cartQuantity = c.getQuantityTextFieldCartDrawer().getAttribute("value");
-			c.getCloseCartDrawerButton().click();
+			c.closeCartDrawer();
 			String quantity = pdp.getQuantityTextField().getAttribute("data-cart-quantity");
 			Assert.assertEquals(quantity, cartQuantity, "Quantity in cart drawer is not same as the one selected in PDP");
 		}
@@ -115,7 +115,7 @@ public class ProductdetaislTest extends BaseClass {
 	public void reviewsSection() throws InterruptedException {
 		Thread.sleep(2000);
 		pdp = new productDetailsPage(driver);
-		webdriverUtility.scrollToElement(pdp.getReviewSection());
+		webdriverUtility.toScrollToElement(pdp.getReviewSection(), driver);
 		boolean actual = pdp.getReviewSection().isDisplayed();
 		Assert.assertTrue(actual, "Reviews section is not displayed in PDP page");
 	}
@@ -125,7 +125,7 @@ public class ProductdetaislTest extends BaseClass {
 	public void detailsSection() throws InterruptedException {
 		Thread.sleep(2000);
 		pdp = new productDetailsPage(driver);
-		webdriverUtility.scrollToElement(pdp.getDetailsTab());
+		pdp.scrollToElement(pdp.getDetailsTab());
 		boolean actual = pdp.getDetailsTab().isDisplayed();
 		Assert.assertTrue(actual, "Details section is not displayed in PDP page");
 	}
@@ -135,7 +135,7 @@ public class ProductdetaislTest extends BaseClass {
 	public void youMayAlsoLikeSectionPDP() throws InterruptedException {
 		Thread.sleep(2000);
 		pdp = new productDetailsPage(driver);
-		webdriverUtility.scrollToElement(pdp.getYouMayAlsoLikeSection());
+		pdp.scrollToElement(pdp.getYouMayAlsoLikeSection());
 		boolean actual = pdp.getYouMayAlsoLikeSection().isDisplayed();
 		Assert.assertTrue(actual, "YOU MAY ALSO LIKE section is not displayed in PDP page");
 	}

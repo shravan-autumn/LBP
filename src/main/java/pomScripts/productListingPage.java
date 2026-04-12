@@ -191,7 +191,7 @@ public class productListingPage extends BaseClass {
 
 			String filterText = plp.getAllFilters().get(i).getText();
 
-			webdriverUtility.scrollToElement(plp.getAllFilters().get(i));
+			webdriverUtility.toScrollToElement(plp.getAllFilters().get(i), driver);
 
 			if (expectedFilters.contains(filterText)) {
 
@@ -225,7 +225,7 @@ public class productListingPage extends BaseClass {
 	public void clearFilters() throws Exception {
 		Thread.sleep(2000);
 		plp = new productListingPage(driver);
-		webdriverUtility.scrollToElement(plp.getFilterHeading());
+		webdriverUtility.toScrollToElement(plp.getFilterHeading(), driver);
 		plp.getClearAllLink().click();
 		webdriverUtility.waitForPageToLoad(driver);
 	}
@@ -235,8 +235,8 @@ public class productListingPage extends BaseClass {
 		WebElement firstProduct = plp.getProductTitlesPLP().get(0);
 		webdriverUtility.waitUntilElementIsVisible(firstProduct);
 		String product = firstProduct.getText();
-		webdriverUtility.scrollToElement(plp.getProductTitlesPLP().get(0));
-		webdriverUtility.scrollToElement(plp.getAddToCartButtons().get(0));
+		webdriverUtility.toScrollToElement(plp.getProductTitlesPLP().get(0), driver);
+		webdriverUtility.toScrollToElement(plp.getAddToCartButtons().get(0), driver);
 		plp.getAddToCartButtons().get(0).click();
 		webdriverUtility.waitUntilElementIsVisible(plp.getViewCartButton());
 		plp.getViewCartButton().click();
@@ -244,19 +244,28 @@ public class productListingPage extends BaseClass {
 	}
 
 	public void viewAll() {
-		webdriverUtility.scrollToElement(plp.getViewAllLink());
+		webdriverUtility.toScrollToElement(plp.getViewAllLink(), driver);
 		plp.getViewAllLink().click();
 		webdriverUtility.waitForPageToLoad(driver);
 	}
 
 	public void faqsSection() {
-		webdriverUtility.scrollToElement(plp.getFaqsSection());
+		webdriverUtility.toScrollToElement(plp.getFaqsSection(), driver);
 		webdriverUtility.waitUntilElementIsVisible(plp.getFaqsSection());
 	}
 
 	public void writeToUs() {
-		webdriverUtility.scrollToElement(plp.getWriteToUsLink());
+		webdriverUtility.toScrollToElement(plp.getWriteToUsLink(), driver);
 		plp.getWriteToUsLink().click();
 		webdriverUtility.waitForPageToLoad(driver);
+	}
+	public void refreshPage() {
+		driver.navigate().refresh();
+	}
+	public void navigateBack() {
+		driver.navigate().back();
+	}
+	public void scrollToElement(WebElement element) {
+		webdriverUtility.toScrollToElement(element, driver);
 	}
 }

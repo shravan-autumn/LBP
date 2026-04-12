@@ -379,7 +379,7 @@ public class webdriverUtility extends javaUtility {
 	}
 
 	// scroll
-	public void toScrollToElement(WebElement ele) {
+	public static void toScrollToElement(WebElement ele, WebDriver driver) {
 		Actions act = new Actions(driver);
 		act.scrollToElement(ele).perform();
 	}

@@ -10,21 +10,9 @@
         <methods>
           <include name="launchApplication"/>
           <include name="teardown"/>
-          <include name="verifyDiscoverBeautyBillSection"/>
           <include name="verifyInTheSpotlightSection"/>
-          <include name="verifyAddToCartFunctionality"/>
-          <include name="verifyHeroBannerNavigation"/>
-          <include name="verifyShopByConcernSection"/>
         </methods>
       </class> <!-- Tests.HomepageTest -->
-      <class name="Tests.ProductdetaislTest">
-        <methods>
-          <include name="launchApplication"/>
-          <include name="quantityDecrease"/>
-          <include name="teardown"/>
-          <include name="quantityIncrease"/>
-        </methods>
-      </class> <!-- Tests.ProductdetaislTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

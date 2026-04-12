@@ -42,7 +42,7 @@ public class LoginpageTest extends BaseClass {
 		lp.getLogoutLink().click();
 	}
 	// case 3: To verify if user is able to login with valid credentials
-	@Test(priority = 3)
+	@Test(priority = 3, dependsOnMethods = "createAccount")
 	public void login() {
 		lp.goToWebsite();
 		hp.getAccountLink().click();

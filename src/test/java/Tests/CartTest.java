@@ -31,9 +31,9 @@ public class CartTest extends BaseClass {
 		lp = new loginPage(driver);
 		hp = new homePage(driver);
 		lp.goToWebsite();
-		hp.getCartLink().click();
+		hp.clickCartIcon();
 		cartDrawer c = new cartDrawer(driver);
-		c.getContinueShopping().click();
+		c.clickContinueShopping();
 		String expected = "https://lovebeautyandplanet.in/collections/all";
 		String actual = driver.getCurrentUrl();
 		Assert.assertEquals(expected, actual, "user fails to redirect to collections page");
@@ -48,11 +48,11 @@ public class CartTest extends BaseClass {
 	public void addToCartFromPDP() throws InterruptedException {
 		lp = new loginPage(driver);
 		hp = new homePage(driver);
-		hp.getSearchTextField().click();
+		hp.clickSearchIcon();
 		webdriverUtility.waitUntilElementIsVisible(hp.getSearchTextField());
 
 		hp.getSearchTextField().sendKeys("hair");
-		hp.getSearchButton().click();
+		hp.clickSearchButton();
 		plp = new productListingPage(driver);
 		String product = "Onion, Black Seed Oil & Patchouli Hair Mask";
 		for (WebElement ele : plp.getProductLinksSearchPLP()) {
@@ -63,34 +63,34 @@ public class CartTest extends BaseClass {
 		}
 		pdp = new productDetailsPage(driver);
 		product1price = pdp.getProductPrice().getText();
-		webdriverUtility.scrollToElement(pdp.getAddToCartButton());
-		pdp.getAddToCartButton().click();
+		pdp.scrollToElement(pdp.getAddToCartButton());
+		pdp.clickAddtoCart();
 		cartDrawer c = new cartDrawer(driver);
 		webdriverUtility.waitUntilElementIsVisible(c.getCheckoutButtonCartDrawer());
 		String cartPro = c.getProductTitleCartDrawer().getText();
 		Assert.assertEquals(cartPro.toLowerCase(), product.toLowerCase(),
 				"Product in cart drawer is not same as the one added to cart");
-		c.getCloseCartDrawerButton().click();
-		hp.getLogo().click();
-		hp.getSearchTextField().click();
+		c.clickcloseCartDrawerButton();
+		hp.clickLogo();
+		hp.clickSearchIcon();
 		webdriverUtility.waitUntilElementIsVisible(hp.getSearchTextField());
 		hp.getSearchTextField().sendKeys("body");
-		hp.getSearchButton().click();
+		hp.clickSearchButton();
 		plp = new productListingPage(driver);
 		String product2 = "Coconut Water & Mimosa Flower Conditioner - 200 ml";
 		for (WebElement ele1 : plp.getProductLinksSearchPLP()) {
 			if (ele1.getText().equalsIgnoreCase(product2)) {
-				webdriverUtility.scrollToElement(ele1);
+				webdriverUtility.toScrollToElement(ele1, driver);
 				ele1.click();
 				break;
 			}
 		}
 		pdp = new productDetailsPage(driver);
 		product2price = pdp.getProductPrice().getText();
-		webdriverUtility.waitUntilElementIsVisible(pdp.getProductTitle());
-		webdriverUtility.scrollToElement(pdp.getAddToCart2());
-		pdp.getAddToCart2().click();
-		webdriverUtility.waitUntilElementIsVisible(c.getCheckoutButtonCartDrawer());
+		pdp.waitUntilElementIsVisible(pdp.getProductTitle());
+		pdp.scrollToElement(pdp.getAddToCart2());
+		pdp.clickAddtoCart2();
+		c.waitUntilElementIsVisible(c.getCheckoutButtonCartDrawer());
 		String cartPro1 = c.getProductTitleCartDrawer().getText();
 		Assert.assertEquals(cartPro1.toLowerCase(), product2.toLowerCase(),
 				"Product in cart drawer is not same as the one added to cart");
@@ -123,9 +123,9 @@ public class CartTest extends BaseClass {
 	public void checkout() {
 		cartDrawer c = new cartDrawer(driver);
 		c.getCheckoutButtonCartDrawer().click();
-		webdriverUtility.waitUntilElementIsVisible(c.getGokwikPopup());
+		c.waitUntilElementIsVisible(c.getGokwikPopup());
 		Assert.assertTrue(c.getGokwikPopup().isDisplayed(), "User is unable to navigate to checkout page");
-		driver.navigate().refresh();
+		hp.refreshPage();
 		driver.get("https://lovebeautyandplanet.in/cart/clear");
 	}
 

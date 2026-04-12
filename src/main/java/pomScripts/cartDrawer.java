@@ -1,6 +1,7 @@
 package pomScripts;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +13,7 @@ import genericUtility.BaseClass;
 import genericUtility.webdriverUtility;
 import net.bytebuddy.asm.MemberSubstitution.FieldValue;
 
-public class cartDrawer  extends BaseClass{
+public class cartDrawer extends BaseClass {
 	WebDriver driver;
 	WebDriverWait wait;
 
@@ -30,6 +31,17 @@ public class cartDrawer  extends BaseClass{
 		return productTitleCartDrawer;
 	}
 
+	@FindBy(xpath = "//a[contains(@class,'cart-item__n')]")
+	private List<WebElement> allproductTitleCartDrawer1;
+
+	public List<WebElement> getAllproductTitleCartDrawer1() {
+		return allproductTitleCartDrawer1;
+	}
+
+	public void setAllproductTitleCartDrawer1(List<WebElement> allproductTitleCartDrawer1) {
+		this.allproductTitleCartDrawer1 = allproductTitleCartDrawer1;
+	}
+
 	public void setProductTitleCartDrawer(WebElement productTitleCartDrawer) {
 		this.productTitleCartDrawer = productTitleCartDrawer;
 	}
@@ -44,6 +56,7 @@ public class cartDrawer  extends BaseClass{
 	public void setCloseCartDrawerButton(WebElement closeCartDrawerButton) {
 		this.closeCartDrawerButton = closeCartDrawerButton;
 	}
+
 	@FindBy(xpath = "(//input[contains(@class,'quantity__input')])[2]")
 	private WebElement quantityTextFieldCartDrawer;
 
@@ -54,6 +67,7 @@ public class cartDrawer  extends BaseClass{
 	public void setQuantityTextFieldCartDrawer(WebElement quantityTextFieldCartDrawer) {
 		this.quantityTextFieldCartDrawer = quantityTextFieldCartDrawer;
 	}
+
 	@FindBy(xpath = "//div[@class='gokwik-checkout']")
 	private WebElement checkoutButtonCartDrawer;
 
@@ -64,6 +78,7 @@ public class cartDrawer  extends BaseClass{
 	public void setCheckoutButtonCartDrawer(WebElement checkoutButtonCartDrawer) {
 		this.checkoutButtonCartDrawer = checkoutButtonCartDrawer;
 	}
+
 	@FindBy(xpath = "//div[@aria-label='Your cart']")
 	private WebElement cartDrawer;
 
@@ -74,7 +89,7 @@ public class cartDrawer  extends BaseClass{
 	public void setCartDrawer(WebElement cartDrawer) {
 		this.cartDrawer = cartDrawer;
 	}
-	
+
 	@FindBy(xpath = "//div[@class='quantity-popover-container']//button[@name='plus']")
 	private WebElement plusButton;
 	@FindBy(xpath = "//div[@class='quantity-popover-container']//button[@name='minus']")
@@ -155,6 +170,7 @@ public class cartDrawer  extends BaseClass{
 	public void setContinueShopping(WebElement continueShopping) {
 		this.continueShopping = continueShopping;
 	}
+
 	@FindBy(xpath = "//div[@id='CartDrawer-CartItems']//span[@class='pro-variant-price']")
 	private WebElement productPrice;
 
@@ -165,7 +181,7 @@ public class cartDrawer  extends BaseClass{
 	public void setProductPrice(WebElement productPrice) {
 		this.productPrice = productPrice;
 	}
-	
+
 	@FindBy(xpath = "//div[@aria-label='Your cart']")
 	private WebElement scroll;
 
@@ -176,16 +192,28 @@ public class cartDrawer  extends BaseClass{
 	public void setScroll(WebElement scroll) {
 		this.scroll = scroll;
 	}
-	
+
 	public void increaseQuantityFromCartDrawer() throws Exception {
 		webdriverUtility.waitUntilElementIsVisible(getCartDrawer());
 		webdriverUtility.waitUntilElementIsVisible(getQuantityTextFieldCartDrawer());
 		Thread.sleep(2000);
 	}
+
 	public void decreaseQuantityFromCartDrawer() throws Exception {
 		webdriverUtility.waitUntilElementIsVisible(getCartDrawer());
 		webdriverUtility.waitUntilElementIsVisible(getQuantityTextFieldCartDrawer());
 	}
-	
-	
+
+	public void closeCartDrawer() {
+		getCloseCartDrawerButton().click();
+	}
+	public void clickContinueShopping() {
+		getContinueShopping().click();
+	}
+	public void clickcloseCartDrawerButton(){
+		getCloseCartDrawerButton().click();
+	}
+	public void waitUntilElementIsVisible(WebElement element) {
+		webdriverUtility.waitUntilElementIsVisible(element);
+	}
 }

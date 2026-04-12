@@ -239,32 +239,65 @@ public class productDetailsPage {
 		}
 		return product;
 	}
+
 	public void invalidPincode() {
-		webdriverUtility.scrollToElement(getPincodeTextField());
+		webdriverUtility.toScrollToElement(getPincodeTextField(), driver);
 		getPincodeTextField().sendKeys("123456");
 		getCheckButton().click();
-		webdriverUtility.scrollToElement(getAddToCartButton());
+		webdriverUtility.toScrollToElement(getAddToCartButton(), driver);
 	}
+
 	public void validPincode() {
-		webdriverUtility.scrollToElement(getPincodeTextField());
+		webdriverUtility.toScrollToElement(getPincodeTextField(), driver);
 		getPincodeTextField().clear();
 		getPincodeTextField().sendKeys("560037");
 		getCheckButton().click();
-		webdriverUtility.scrollToElement(getAddToCartButton());
+		webdriverUtility.toScrollToElement(getAddToCartButton(), driver);
 	}
+
 	public String addToCartFromPDP() {
 		String product = getProductTitle().getText();
-		webdriverUtility.scrollToElement(getAddToCartButton());
+		webdriverUtility.toScrollToElement(getAddToCartButton(), driver);
 		getAddToCartButton().click();
 		return product;
 	}
+
 	public void increaseQuantityFromPDP() throws InterruptedException {
-		webdriverUtility.scrollToElement(getQuantityPlusButton());
+		webdriverUtility.toScrollToElement(getQuantityPlusButton(), driver);
 		getQuantityPlusButton().click();
 	}
+
 	public void decreaseQuantityFromPDP() throws InterruptedException {
-		webdriverUtility.scrollToElement(getQuantityMinusButton());
+		webdriverUtility.toScrollToElement(getQuantityMinusButton(), driver);
 		getQuantityMinusButton().click();
+	}
+
+	public void clickViewAllProducts() {
+		getViewAllProductsLink().click();
+	}
+
+	public void clickViewBundleProduct() {
+		getViewBundleProductsLink().click();
+	}
+
+	public void navigateBack() {
+		driver.navigate().back();
+	}
+
+	public void scrollToElement(WebElement element) {
+		webdriverUtility.toScrollToElement(element, driver);
+	}
+
+	public void clickAddtoCart2() {
+		getAddToCart2().click();
+	}
+
+	public void clickAddtoCart() {
+		getAddToCartButton().click();
+	}
+
+	public void waitUntilElementIsVisible(WebElement element) {
+		webdriverUtility.waitUntilElementIsVisible(element);
 	}
 
 }

@@ -7,13 +7,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.github.javafaker.Faker;
 
+import genericUtility.BaseClass;
 import genericUtility.webdriverUtility;
 
-public class loginPage extends webdriverUtility {
+public class loginPage  {
 	WebDriver driver;
 
 	public loginPage(WebDriver driver) {
-		super(driver);
+		super();
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -172,6 +173,8 @@ public class loginPage extends webdriverUtility {
 		this.logoutLink = logoutLink;
 	}
 
+	
+	
 	public void createAccount(String firstName, String lastName, String email, String phone, String password) {
 		createAccountLink.click();
 		firstNameTextField.sendKeys(firstName);
@@ -180,7 +183,8 @@ public class loginPage extends webdriverUtility {
 		phoneTextField.sendKeys(phone);
 		registerPasswordTextField.sendKeys(password);
 		confirmPasswordTextField.sendKeys(password);
-		webdriverUtility.scrollToElement(signupButton);
+		webdriverUtility.toScrollToElement(signupButton, driver);
+		webdriverUtility.waitUntilElementIsVisible(signupButton);
 		checkbox.click();
 		signupButton.click();
 
@@ -206,7 +210,7 @@ public class loginPage extends webdriverUtility {
 				acceptCookiesButton.click();
 			}
 		} catch (Exception e) {
-			// Cookie not present → ignore
+			e.printStackTrace();
 		}
 	}
 

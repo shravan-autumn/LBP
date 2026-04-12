@@ -40,7 +40,7 @@ public class HomepageTest extends BaseClass {
 		String expectedUrl = "https://lovebeautyandplanet.in/collections/bundle-offers";
 		String actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl);
-		driver.navigate().back();
+		hp.navigateBack();
 	}
 
 	// Case 3: Verify user is able to navigate to product page by clicking on
@@ -52,7 +52,7 @@ public class HomepageTest extends BaseClass {
 		String expectedUrl = "https://lovebeautyandplanet.in/collections/curry-leaves-biotin-mandarin";
 		String actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl);
-		driver.navigate().back();
+		hp.navigateBack();
 	}
 
 	// Case 4: Verify user is able to navigate to About us page by clicking on about
@@ -64,7 +64,7 @@ public class HomepageTest extends BaseClass {
 		String expectedUrl = "https://lovebeautyandplanet.in/pages/our-story";
 		String actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl);
-		driver.navigate().back();
+		hp.navigateBack();
 	}
 
 	// Case 5: Verify user is able to navigate to know your ingredients page by
@@ -76,7 +76,7 @@ public class HomepageTest extends BaseClass {
 		String expectedUrl = "https://lovebeautyandplanet.in/pages/ingredients";
 		String actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl);
-		driver.navigate().back();
+		hp.navigateBack();
 	}
 
 	// Case 6: Verify user is able to navigate to blog listing page by clicking on
@@ -88,7 +88,7 @@ public class HomepageTest extends BaseClass {
 		String expectedUrl = "https://lovebeautyandplanet.in/pages/blogs";
 		String actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl);
-		driver.navigate().back();
+		hp.navigateBack();
 	}
 
 	// Case 7: Verify user is able to navigate to Contact us page by clicking on
@@ -100,7 +100,7 @@ public class HomepageTest extends BaseClass {
 		String expectedUrl = "https://lovebeautyandplanet.in/pages/contact-us";
 		String actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl);
-		driver.navigate().back();
+		hp.navigateBack();
 	}
 
 	// Case 8: Verify user is able to navigate to relevant page by clicking on hero
@@ -112,7 +112,7 @@ public class HomepageTest extends BaseClass {
 		hp.clickHeronBannerRedirection();
 		String currentUrl = driver.getCurrentUrl();
 		Assert.assertNotEquals(homepage, currentUrl, "User is not redirected to Relevant Page");
-		driver.navigate().back();
+		hp.navigateBack();
 	}
 
 	// Case 9: Verify if user is able to switch the tabs and navigate to relevant
@@ -122,7 +122,7 @@ public class HomepageTest extends BaseClass {
 		for (int i = 0; i < hp.getAllCollectionTabs().size(); i++) {
 			hp.clickTabAndRedirect(i);
 			Assert.assertTrue(driver.getCurrentUrl().contains("collections"), "URL does not contain expected text");
-			driver.navigate().back();
+			hp.navigateBack();
 		}
 	}
 
@@ -130,19 +130,19 @@ public class HomepageTest extends BaseClass {
 	// on product in collection tab
 	@Test(priority = 10)
 	public void verifyProductNavigationFromCollectionTab() throws InterruptedException {
-		driver.navigate().refresh();
+		hp.refreshPage();
 		String product = "Argan Oil & Lavender Hair Mask - 200 ml";
 		for (WebElement pro : hp.getProductCardDescriptions()) {
 
 			if (pro.getText().equalsIgnoreCase(product)) {
-				webdriverUtility.scrollToElement(pro);
+				hp.scrollToElement(pro);
 				pro.click();
 				pdp = new productDetailsPage(driver);
-				webdriverUtility.waitUntilElementIsVisible(pdp.getProductTitle());
+				hp.waitUnitlelementIsVisible(pdp.getProductTitle());
 				String actualProduct = pdp.getProductTitle().getText();
 				Assert.assertEquals(actualProduct, product.toLowerCase(),
 						"User is not navigated to relevant product page");
-				driver.navigate().back();
+				hp.navigateBack();
 				break;
 			}
 		}
@@ -150,67 +150,71 @@ public class HomepageTest extends BaseClass {
 	}
 
 	// Case 12: Verify user is able to add a product to cart
-	@Test(priority = 12, dependsOnMethods = "verifyProductNavigationFromCollectionTab")
+	@Test(priority = 12)
 	public void verifyAddToCartFunctionality() throws Exception {
 
 		// String product = null;
 		String a = hp.addToCart();
+		String cartPro = null;
+
 		cartDrawer c = new cartDrawer(driver);
-		String cartPro = c.getProductTitleCartDrawer().getText();
+		for (WebElement pro : c.getAllproductTitleCartDrawer1()) {
+			if (pro.getText().toLowerCase().contains(a.toLowerCase())) {
+				cartPro = pro.getText();
+				break;
+			}
+		}
 		Assert.assertEquals(cartPro.toLowerCase(), a.toLowerCase(),
 				"Product in cart drawer is not same as the one added to cart");
-		driver.get("https://lovebeautyandplanet.in/cart/clear");
-		hp.getLogo().click();
-
+		hp.clearCartAndNaviagteToHomepage();
 	}
 
 	// case 13: Verify shop by concern section
 	@Test(priority = 13)
 	public void verifyShopByConcernSection() {
-		webdriverUtility.scrollToElement(hp.getFrizzConcern());
+		hp.scrollToElement(hp.getFrizzConcern());
 		Assert.assertTrue(hp.getShopByConcernSection().isDisplayed(), "Shop by concern section is not displayed");
-
-		hp.getFrizzConcern().click();
+		hp.clickFizzConcern();
 		String expectedUrl = "https://lovebeautyandplanet.in/collections/argan-oil-lavender";
 		String actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl,
 				"User is not navigated to relevant page after clicking on frizz concern");
-		driver.navigate().back();
-
-		hp.getHairFallConcern().click();
+		hp.navigateBack();
+		
+		hp.clickHairFallConcern();
 		expectedUrl = "https://lovebeautyandplanet.in/collections/onion-blackseed-patchouli";
 		actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl,
 				"User is not navigated to relevant page after clicking on hair fall concern");
-		driver.navigate().back();
+		hp.navigateBack();
 
-		hp.getDamageConcern().click();
+		hp.clickDamageConcern();
 		expectedUrl = "https://lovebeautyandplanet.in/collections/bond-repair";
 		actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl,
 				"User is not navigated to relevant page after clicking on damage concern");
-		driver.navigate().back();
+		hp.navigateBack();
 
-		hp.getSplitEndsConcern().click();
+		hp.clickSplitEndsConcern();
 		expectedUrl = "https://lovebeautyandplanet.in/collections/curry-leaves-biotin-mandarin";
 		actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl,
 				"User is not navigated to relevant page after clicking on split ends concern");
-		driver.navigate().back();
-
-		hp.getCurlCareConcern().click();
+		hp.navigateBack();
+		
+		hp.clickCurlCareConcern();
 		expectedUrl = "https://lovebeautyandplanet.in/collections/rice-water-angelica";
 		actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl,
 				"User is not navigated to relevant page after clicking on curl care concern");
-		driver.navigate().back();
+		hp.navigateBack();
 
-		hp.getDandruffConcern().click();
+		hp.clickDandruffConcern();
 		expectedUrl = "https://lovebeautyandplanet.in/collections/tea-tree-and-vetiver";
 		actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl,
 				"User is not navigated to relevant page after clicking on dandruff concern");
-		driver.navigate().back();
+		hp.navigateBack();
 
 	}
 
@@ -222,27 +226,32 @@ public class HomepageTest extends BaseClass {
 		String actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl,
 				"User is not navigated to beauty bill page after clicking on discover beauty bill section");
-		driver.navigate().back();
-
+		hp.navigateBack();
 	}
 
 	// Case 15: Verify in the spot light section and add a product to cart
 	@Test(priority = 15)
 	public void verifyInTheSpotlightSection() {
 		String activeProduct = hp.clickAddToCartInSpotlight();
+		String cartPro = null;
+
 		cartDrawer c = new cartDrawer(driver);
-		String cartPro = c.getProductTitleCartDrawer().getText();
+		for (WebElement pro : c.getAllproductTitleCartDrawer1()) {
+			if (pro.getText().toLowerCase().contains(activeProduct.toLowerCase())) {
+				cartPro = pro.getText();
+				break;
+			}
+		}
 		Assert.assertTrue(cartPro.toLowerCase().contains(activeProduct.toLowerCase()),
 				"Product in cart drawer is not same as the one added to cart");
-		driver.get("https://lovebeautyandplanet.in/cart/clear");
-		hp.getLogo().click();
+		hp.clearCartAndNaviagteToHomepage();
 
 	}
 
 	// Case 16: Verify what sets us apart section
 	@Test(priority = 16)
 	public void verifyWhatSetsUsApartSection() {
-		webdriverUtility.scrollToElement(hp.getWhatSetsUsApartSection());
+		hp.scrollToElement(hp.getWhatSetsUsApartSection());
 		Assert.assertTrue(hp.getWhatSetsUsApartSection().isDisplayed(), "What sets us apart section is not displayed");
 
 		for (int i = 0; i < hp.getWhatSetsUsApartCards().size(); i++) {
@@ -255,14 +264,14 @@ public class HomepageTest extends BaseClass {
 	// case 17: Verify reels section
 	@Test(priority = 17)
 	public void verifyReelsSection() {
-		webdriverUtility.scrollToElement(hp.getReelsSectionHeading());
+		hp.scrollToElement(hp.getReelsSectionHeading());
 		Assert.assertTrue(hp.getReelsSectionHeading().isDisplayed(), "Reels section is not displayed");
 	}
 
 	// case 18: Verify customer love section
 	@Test(priority = 18)
 	public void verifyCustomerLoveSection() {
-		webdriverUtility.scrollToElement(hp.getCustomerLoveSectionHeading());
+		hp.scrollToElement(hp.getCustomerLoveSectionHeading());
 		Assert.assertTrue(hp.getCustomerLoveSectionHeading().isDisplayed(), "Customer love section is not displayed");
 
 	}
@@ -275,7 +284,7 @@ public class HomepageTest extends BaseClass {
 		String actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl,
 				"User is not navigated to our story page after clicking on discover our story section");
-		driver.navigate().back();
+		hp.navigateBack();
 
 	}
 
@@ -287,7 +296,7 @@ public class HomepageTest extends BaseClass {
 		String actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl,
 				"User is not navigated to blogs page after clicking on beauty archives view all link");
-		driver.navigate().back();
+		hp.navigateBack();
 		String blog = "6 Post-Festive Hair Hacks That Will Make Your Hair Healthier Than Ever";
 		for (int i = 0; i < hp.getBeautyArchivesArticleLinks().size(); i++) {
 			if (hp.getBeautyArchivesArticleLinks().get(i).getText().equalsIgnoreCase(blog)) {
@@ -295,7 +304,7 @@ public class HomepageTest extends BaseClass {
 				String actualBlogTitle = hp.getBlogHeading().getText();
 				Assert.assertEquals(actualBlogTitle, blog,
 						"User is not navigated to relevant blog page after clicking on blog");
-				driver.navigate().back();
+				hp.navigateBack();
 				break;
 			}
 		}
@@ -316,7 +325,7 @@ public class HomepageTest extends BaseClass {
 		hp = new homePage(driver);
 		// webdriverUtility.scrollToElement(hp.getBeBeautifulSection());
 		for (int i = 0; i < hp.getProductLinksFooter().size(); i++) {
-			webdriverUtility.scrollToElement(hp.getProductLinksFooter().get(i));
+			webdriverUtility.toScrollToElement(hp.getProductLinksFooter().get(i), driver);
 			String linkName = hp.getProductLinksFooter().get(i).getText();
 			hp.getProductLinksFooter().get(i).click();
 			String currentUrl = driver.getCurrentUrl();
@@ -336,7 +345,7 @@ public class HomepageTest extends BaseClass {
 
 			Assert.assertTrue(matchFound,
 					"User is not navigated to relevant page after clicking on footer link: " + linkName);
-			driver.navigate().back();
+			hp.navigateBack();
 		}
 	}
 
@@ -345,7 +354,7 @@ public class HomepageTest extends BaseClass {
 	public void verifyFooterConcernLinks() {
 		hp = new homePage(driver);
 		for (int i = 0; i < hp.getConcernsFooter().size(); i++) {
-			webdriverUtility.scrollToElement(hp.getConcernsFooter().get(i));
+			hp.scrollToElement(hp.getConcernsFooter().get(i));
 			String linkName = hp.getConcernsFooter().get(i).getText();
 			hp.getConcernsFooter().get(i).click();
 			String currentUrl = driver.getCurrentUrl();
@@ -365,7 +374,7 @@ public class HomepageTest extends BaseClass {
 
 			Assert.assertTrue(matchFound,
 					"User is not navigated to relevant page after clicking on footer link: " + linkName);
-			driver.navigate().back();
+			hp.navigateBack();
 		}
 	}
 
@@ -374,7 +383,7 @@ public class HomepageTest extends BaseClass {
 	public void verifyFooterQuickLinks() {
 		hp = new homePage(driver);
 		for (int i = 0; i < hp.getQuickLinksFooter().size(); i++) {
-			webdriverUtility.scrollToElement(hp.getQuickLinksFooter().get(i));
+			hp.scrollToElement(hp.getQuickLinksFooter().get(i));
 			String linkName = hp.getQuickLinksFooter().get(i).getText();
 			hp.getQuickLinksFooter().get(i).click();
 			String currentUrl = driver.getCurrentUrl();
@@ -394,7 +403,7 @@ public class HomepageTest extends BaseClass {
 
 			Assert.assertTrue(matchFound,
 					"User is not navigated to relevant page after clicking on footer link: " + linkName);
-			driver.navigate().back();
+			hp.navigateBack();
 		}
 
 	}
@@ -405,7 +414,7 @@ public class HomepageTest extends BaseClass {
 
 		for (int i = 0; i < hp.getLegalFooter().size(); i++) {
 
-			webdriverUtility.scrollToElement(hp.getLegalFooter().get(i));
+			hp.scrollToElement(hp.getLegalFooter().get(i));
 
 			String linkName = hp.getLegalFooter().get(i).getText();
 
@@ -420,7 +429,7 @@ public class HomepageTest extends BaseClass {
 
 			int windowsAfter = driver.getWindowHandles().size();
 
-			// 🔥 CASE 1 — NEW TAB OPENED
+			// NEW TAB OPENED
 			if (windowsAfter > windowsBefore) {
 
 				for (String window : driver.getWindowHandles()) {
@@ -431,12 +440,12 @@ public class HomepageTest extends BaseClass {
 				}
 
 			}
-			// 🔥 CASE 2 — SAME TAB NAVIGATION
+			// SAME TAB NAVIGATION
 			else {
 				new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.urlContains("/"));
 			}
 
-			// ===== ASSERT URL (FIRST 4 LETTER MATCH) =====
+			//FIRST 4 LETTER MATCH
 
 			String currentUrl = driver.getCurrentUrl().toLowerCase();
 
@@ -454,7 +463,7 @@ public class HomepageTest extends BaseClass {
 
 			Assert.assertTrue(matchFound, "User is not navigated correctly after clicking footer link");
 
-			// 🔥 CLOSE CHILD TAB OR GO BACK
+			// CLOSE CHILD TAB OR GO BACK
 			if (!driver.getWindowHandle().equals(parentWindow)) {
 				driver.close(); // close new tab
 				driver.switchTo().window(parentWindow);
@@ -468,14 +477,14 @@ public class HomepageTest extends BaseClass {
 	// case 26: Verify the social media links in footer
 	@Test(priority = 26)
 	public void verifyFooterSocialMediaLinks() {
-		String parent=hp.clickfacebook();
+		String parent = hp.clickfacebook();
 		String expectedUrl = "https://www.facebook.com/lovebeautyandplanetin";
 		String actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl,
 				"User is not navigated to Facebook page after clicking on Facebook link");
 		driver.close();
 		driver.switchTo().window(parent);
-		
+
 		hp.clickinstagram();
 		String expectedUrlinsta = "https://www.instagram.com/lovebeautyandplanet_in/";
 		String actualUrlinsta = driver.getCurrentUrl();
@@ -483,7 +492,7 @@ public class HomepageTest extends BaseClass {
 				"User is not navigated to Instagram page after clicking on Facebook link");
 		driver.close();
 		driver.switchTo().window(parent);
-		
+
 		hp.clickyoutube();
 		String expectedUrlYT = "https://www.youtube.com/channel/UCUFcrEf1Wb1164G6O2_LoyA";
 		String actualUrlYT = driver.getCurrentUrl();
@@ -496,7 +505,7 @@ public class HomepageTest extends BaseClass {
 	// Case 27: Verify the Caution notice
 	@Test(priority = 27)
 	public void verifyCautionNotice() {
-		webdriverUtility.scrollToElement(hp.getCautionNotice());
+		hp.scrollToElement(hp.getCautionNotice());
 		Assert.assertTrue(hp.getCautionNotice().isDisplayed(), "Caution notice is not displayed in the footer");
 	}
 

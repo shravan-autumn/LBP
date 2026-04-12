@@ -366,9 +366,9 @@ public class homePage extends BaseClass {
 
 	// tab section redirection action
 	public void clickTabAndRedirect(int a) {
-		webdriverUtility.scrollToElement(getCombosTab());
+		webdriverUtility.toScrollToElement(getCombosTab(), driver);
 		getAllCollectionTabs().get(a).click();
-		webdriverUtility.scrollToElement(getViewAllLink().get(a));
+		webdriverUtility.toScrollToElement(getViewAllLink().get(a), driver);
 		webdriverUtility.elementToBeClickable(driver, getViewAllLink().get(a));
 		getViewAllLink().get(a).click();
 	}
@@ -378,8 +378,8 @@ public class homePage extends BaseClass {
 		driver.navigate().refresh();
 		// Get first product title
 		String pro1 = getProductCardDescriptions().get(0).getText();
-		webdriverUtility.scrollToElement(getProductCardDescriptions().get(0));
-		webdriverUtility.scrollToElement(getAddToCart().get(0));
+		webdriverUtility.toScrollToElement(getProductCardDescriptions().get(0), driver);
+		webdriverUtility.toScrollToElement(getAddToCart().get(0), driver);
 		// Click first product add to cart
 		getAddToCart().get(0).click();
 		webdriverUtility.waitUntilElementIsVisible(getViewCartButton());
@@ -497,7 +497,7 @@ public class homePage extends BaseClass {
 
 	// beauty bill section action method
 	public void clickDiscoverBeautyBill() {
-		webdriverUtility.scrollToElement(getDiscoverBeautyBillSection());
+		webdriverUtility.toScrollToElement(getDiscoverBeautyBillSection(), driver);
 		getDiscoverBeautyBillSection().click();
 	}
 
@@ -576,7 +576,7 @@ public class homePage extends BaseClass {
 
 	// click add to cart in spotlight section
 	public String clickAddToCartInSpotlight() {
-		webdriverUtility.scrollToElement(getWhatSetsUsApartSection());
+		webdriverUtility.toScrollToElement(getWhatSetsUsApartSection(), driver);
 		// Right 3 times
 		int n = 3;
 		clickRightMultipleTimes(n);
@@ -640,7 +640,7 @@ public class homePage extends BaseClass {
 
 	//what sets us apart dropdown actions
 	public void whatsetsUsapart(int a) {
-		webdriverUtility.scrollToElement(getWhatSetsUsApartCards().get(a));
+		webdriverUtility.toScrollToElement(getWhatSetsUsApartCards().get(a), driver);
 		getWhatSetsUsApartCards().get(a).click();
 	}
 	
@@ -722,7 +722,7 @@ public class homePage extends BaseClass {
 
 //discover our story section action method
 	public void clickDiscoverOurStory() {
-		webdriverUtility.scrollToElement(getDiscoverOurStorySection());
+		webdriverUtility.toScrollToElement(getDiscoverOurStorySection(), driver);
 		webdriverUtility.waitUntilElementIsVisible(getDiscoverOurStorySection());
 		getDiscoverOurStorySection().click();
 	}
@@ -761,7 +761,7 @@ public class homePage extends BaseClass {
 
 	// beauty archives section action method
 	public void clickBeautyArchivesViewAll() {
-		webdriverUtility.scrollToElement(getBeautyArchiveNextBtn());
+		webdriverUtility.toScrollToElement(getBeautyArchiveNextBtn(), driver);
 		getBeautyArchivesViewAllLink().click();
 	}
 
@@ -847,7 +847,7 @@ public class homePage extends BaseClass {
 
 	// newsletter subscription action method
 	public void subscribeToNewsletter() {
-		webdriverUtility.scrollToElement(getProductLinksFooterHeading());
+		webdriverUtility.toScrollToElement(getProductLinksFooterHeading(), driver);
 		Faker faker = new Faker();
 		getNewsletterEmailTextField().sendKeys(faker.internet().emailAddress());
 		getNewsletterCheckbox().click();
@@ -997,7 +997,7 @@ public class homePage extends BaseClass {
 	}
 	
 	public String clickfacebook() {
-		webdriverUtility.scrollToElement(getFacebookLink());
+		webdriverUtility.toScrollToElement(getFacebookLink(), driver);
 		getFacebookLink().click();
 		Set<String> windows = driver.getWindowHandles();
 		String parent = driver.getWindowHandle();
@@ -1010,7 +1010,7 @@ public class homePage extends BaseClass {
 		return parent;
 	}
 	public String clickinstagram() {
-		webdriverUtility.scrollToElement(getInstagramLink());
+		webdriverUtility.toScrollToElement(getInstagramLink(), driver);
 		getInstagramLink().click();
 		Set<String> windows1 = driver.getWindowHandles();
 		String parent1 = driver.getWindowHandle();
@@ -1024,7 +1024,7 @@ public class homePage extends BaseClass {
 		
 	}
 	public String clickyoutube() {
-		webdriverUtility.scrollToElement(getYoutubeLink());
+		webdriverUtility.toScrollToElement(getYoutubeLink(), driver);
 		getYoutubeLink().click();
 		Set<String> windows2 = driver.getWindowHandles();
 		String parent2 = driver.getWindowHandle();
@@ -1035,6 +1035,60 @@ public class homePage extends BaseClass {
 			}
 		}
 		return parent2;
+	}
+
+	public void navigateBack() {
+		driver.navigate().back();
+
+	}
+	public void refreshPage() {
+		driver.navigate().refresh();
+	}
+	public void scrollToElement(WebElement element) {
+		webdriverUtility.toScrollToElement(element, driver);
+	}
+	public void waitUnitlelementIsVisible(WebElement element) {
+		webdriverUtility.waitUntilElementIsVisible(element);
+	}
+	public void clearCartAndNaviagteToHomepage() {
+		driver.get("https://lovebeautyandplanet.in/cart/clear");
+		getLogo().click();
+	}
+	public void clickFizzConcern() {
+		getFrizzConcern().click();
+
+	}
+	public void clickHairFallConcern() {
+		getHairFallConcern().click();
+
+	}
+	public void clickDamageConcern() {
+		getDamageConcern().click();
+
+	}
+	public void clickSplitEndsConcern() {
+		getSplitEndsConcern().click();
+
+	}
+	public void clickCurlCareConcern() {
+		getCurlCareConcern().click();
+
+	}
+	public void clickDandruffConcern() {
+		getDandruffConcern().click();
+
+	}
+	public void clickCartIcon() {
+		
+		getCartLink().click();
+	}
+	public void clickSearchIcon() {
+		getSearchTextField().click();	
+		}
+	public void clickSearchButton() {
+		getSearchButton().click();	}
+	public void clickLogo() {
+		getLogo().click();
 	}
 
 }
