@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">54 methods, 1 failed,   53 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Tests.HomepageTest" class="method navigator-link" hash-for-method="verifyInTheSpotlightSection">verifyInTheSpotlightSection</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">54 methods,   54 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -122,12 +108,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Tests.CartTest" class="method navigator-link" hash-for-method="addToCartFromPDP">addToCartFromPDP</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Tests.ProductdetaislTest" class="method navigator-link" hash-for-method="addToCartFromPDP">addToCartFromPDP</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Tests.ProductdetaislTest" class="method navigator-link" hash-for-method="addToCartFromPDP">addToCartFromPDP</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Tests.CartTest" class="method navigator-link" hash-for-method="addToCartFromPDP">addToCartFromPDP</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -337,6 +323,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Tests.HomepageTest" class="method navigator-link" hash-for-method="verifyInTheSpotlightSection">verifyInTheSpotlightSection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Tests.HomepageTest" class="method navigator-link" hash-for-method="verifyNewsletterSubscription">verifyNewsletterSubscription</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -392,46 +383,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">Tests.HomepageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyInTheSpotlightSection">
-                  </a> <!-- verifyInTheSpotlightSection -->
-                  <span class="method-name">verifyInTheSpotlightSection</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=146.0.7680.178)
-Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3730fc789148031849249136bc5864ad, clickElement {id=f.010C4565694B37DAD76FE713605F419D.d.C049E00B022A78094E909716808B0B56.e.4544}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\OrCon\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65207}, goog:processID: 18820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65207/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3730fc789148031849249136bc5864ad)] -&gt; xpath: (//div[text()=&apos;in the spotlight&apos;]//parent::div[@class=&apos;container&apos;]//descendant::div[@class=&apos;owl-item active&apos;]//button[@name=&apos;add&apos;])[1]]
-Session ID: 3730fc789148031849249136bc5864ad
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
-	at pomScripts.homePage.clickAddToCartInSpotlight(homePage.java:591)
-	at Tests.HomepageTest.verifyInTheSpotlightSection(HomepageTest.java:235)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 30 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -779,6 +730,13 @@ Session ID: 3730fc789148031849249136bc5864ad
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="verifyInTheSpotlightSection">
+                  </a> <!-- verifyInTheSpotlightSection -->
+                  <span class="method-name">verifyInTheSpotlightSection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="verifyNewsletterSubscription">
                   </a> <!-- verifyNewsletterSubscription -->
                   <span class="method-name">verifyNewsletterSubscription</span>
@@ -904,221 +862,221 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(54);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyFooterProductLinks')
-data.setCell(0, 2, 'Tests.HomepageTest')
-data.setCell(0, 3, 22803);
+data.setCell(0, 1, 'appliedFilters')
+data.setCell(0, 2, 'Tests.ProductlistingpageTest')
+data.setCell(0, 3, 28774);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyFooterConcernLinks')
+data.setCell(1, 1, 'verifyFooterProductLinks')
 data.setCell(1, 2, 'Tests.HomepageTest')
-data.setCell(1, 3, 20079);
+data.setCell(1, 3, 20594);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'addToCartFromPDP')
-data.setCell(2, 2, 'Tests.CartTest')
-data.setCell(2, 3, 19874);
+data.setCell(2, 1, 'verifyFooterConcernLinks')
+data.setCell(2, 2, 'Tests.HomepageTest')
+data.setCell(2, 3, 17793);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'createAccount')
 data.setCell(3, 2, 'Tests.LoginpageTest')
-data.setCell(3, 3, 16824);
+data.setCell(3, 3, 14160);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'login')
-data.setCell(4, 2, 'Tests.LoginpageTest')
-data.setCell(4, 3, 15501);
+data.setCell(4, 1, 'verifyCollectionTabsNavigation')
+data.setCell(4, 2, 'Tests.HomepageTest')
+data.setCell(4, 3, 13849);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyShopByConcernSection')
+data.setCell(5, 1, 'verifyFooterLegalLinks')
 data.setCell(5, 2, 'Tests.HomepageTest')
-data.setCell(5, 3, 13964);
+data.setCell(5, 3, 13378);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyFooterQuickLinks')
-data.setCell(6, 2, 'Tests.HomepageTest')
-data.setCell(6, 3, 13328);
+data.setCell(6, 1, 'addToCartFromPDP')
+data.setCell(6, 2, 'Tests.CartTest')
+data.setCell(6, 3, 13358);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifyAddToCartFunctionality')
+data.setCell(7, 1, 'verifyFooterQuickLinks')
 data.setCell(7, 2, 'Tests.HomepageTest')
-data.setCell(7, 3, 13286);
+data.setCell(7, 3, 13312);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyCollectionTabsNavigation')
+data.setCell(8, 1, 'verifyShopByConcernSection')
 data.setCell(8, 2, 'Tests.HomepageTest')
-data.setCell(8, 3, 12791);
+data.setCell(8, 3, 12680);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifyFooterLegalLinks')
-data.setCell(9, 2, 'Tests.HomepageTest')
-data.setCell(9, 3, 11985);
+data.setCell(9, 1, 'login')
+data.setCell(9, 2, 'Tests.LoginpageTest')
+data.setCell(9, 3, 12648);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'verifyNewsletterSubscription')
+data.setCell(10, 1, 'verifyAddToCartFunctionality')
 data.setCell(10, 2, 'Tests.HomepageTest')
-data.setCell(10, 3, 11872);
+data.setCell(10, 3, 10875);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'verifyFooterSocialMediaLinks')
+data.setCell(11, 1, 'verifyNewsletterSubscription')
 data.setCell(11, 2, 'Tests.HomepageTest')
-data.setCell(11, 3, 9011);
+data.setCell(11, 3, 10170);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'appliedFilters')
-data.setCell(12, 2, 'Tests.ProductlistingpageTest')
-data.setCell(12, 3, 8747);
+data.setCell(12, 1, 'verifyInTheSpotlightSection')
+data.setCell(12, 2, 'Tests.HomepageTest')
+data.setCell(12, 3, 7884);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'pdpToPlpNavigation')
-data.setCell(13, 2, 'Tests.ProductdetaislTest')
-data.setCell(13, 3, 8403);
+data.setCell(13, 1, 'verifyFooterSocialMediaLinks')
+data.setCell(13, 2, 'Tests.HomepageTest')
+data.setCell(13, 3, 7275);
 data.setCell(14, 0, 14)
 data.setCell(14, 1, 'hpToPdpNavigation')
 data.setCell(14, 2, 'Tests.ProductdetaislTest')
-data.setCell(14, 3, 8130);
+data.setCell(14, 3, 6578);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'verifyInTheSpotlightSection')
-data.setCell(15, 2, 'Tests.HomepageTest')
-data.setCell(15, 3, 7534);
+data.setCell(15, 1, 'hpToPlpNavigation')
+data.setCell(15, 2, 'Tests.ProductlistingpageTest')
+data.setCell(15, 3, 5532);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'emptyCart')
-data.setCell(16, 2, 'Tests.CartTest')
-data.setCell(16, 3, 6544);
+data.setCell(16, 1, 'pdpToPlpNavigation')
+data.setCell(16, 2, 'Tests.ProductdetaislTest')
+data.setCell(16, 3, 5493);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'addToCartFromPLP')
-data.setCell(17, 2, 'Tests.ProductlistingpageTest')
-data.setCell(17, 3, 6238);
+data.setCell(17, 1, 'verifyProductNavigationFromCollectionTab')
+data.setCell(17, 2, 'Tests.HomepageTest')
+data.setCell(17, 3, 5237);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'hpToPlpNavigation')
+data.setCell(18, 1, 'addToCartFromPLP')
 data.setCell(18, 2, 'Tests.ProductlistingpageTest')
-data.setCell(18, 3, 6021);
+data.setCell(18, 3, 5179);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'checkout')
-data.setCell(19, 2, 'Tests.CartTest')
-data.setCell(19, 3, 5598);
+data.setCell(19, 1, 'loginPageNavigation')
+data.setCell(19, 2, 'Tests.LoginpageTest')
+data.setCell(19, 3, 4688);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'announcementBarNavigation')
-data.setCell(20, 2, 'Tests.HomepageTest')
-data.setCell(20, 3, 4964);
+data.setCell(20, 1, 'clearFilters')
+data.setCell(20, 2, 'Tests.ProductlistingpageTest')
+data.setCell(20, 3, 4667);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'quantityIncrease')
+data.setCell(21, 1, 'quantityDecrease')
 data.setCell(21, 2, 'Tests.ProductdetaislTest')
-data.setCell(21, 3, 4941);
+data.setCell(21, 3, 4497);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'clearFilters')
-data.setCell(22, 2, 'Tests.ProductlistingpageTest')
-data.setCell(22, 3, 4707);
+data.setCell(22, 1, 'quantityIncrease')
+data.setCell(22, 2, 'Tests.ProductdetaislTest')
+data.setCell(22, 3, 4371);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'quantityDecrease')
-data.setCell(23, 2, 'Tests.ProductdetaislTest')
-data.setCell(23, 3, 4565);
+data.setCell(23, 1, 'emptyCart')
+data.setCell(23, 2, 'Tests.CartTest')
+data.setCell(23, 3, 4214);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'loginPageNavigation')
-data.setCell(24, 2, 'Tests.LoginpageTest')
-data.setCell(24, 3, 4536);
+data.setCell(24, 1, 'verifyBeautyArchivesSection')
+data.setCell(24, 2, 'Tests.HomepageTest')
+data.setCell(24, 3, 4206);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'verifyBeautyArchivesSection')
-data.setCell(25, 2, 'Tests.HomepageTest')
-data.setCell(25, 3, 3948);
+data.setCell(25, 1, 'checkout')
+data.setCell(25, 2, 'Tests.CartTest')
+data.setCell(25, 3, 4203);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'filteredproducts')
-data.setCell(26, 2, 'Tests.ProductlistingpageTest')
-data.setCell(26, 3, 3537);
+data.setCell(26, 1, 'verifyWhatSetsUsApartSection')
+data.setCell(26, 2, 'Tests.HomepageTest')
+data.setCell(26, 3, 3948);
 data.setCell(27, 0, 27)
-data.setCell(27, 1, 'verifyProductNavigationFromCollectionTab')
-data.setCell(27, 2, 'Tests.HomepageTest')
-data.setCell(27, 3, 3535);
+data.setCell(27, 1, 'filteredproducts')
+data.setCell(27, 2, 'Tests.ProductlistingpageTest')
+data.setCell(27, 3, 3573);
 data.setCell(28, 0, 28)
-data.setCell(28, 1, 'verifyWhatSetsUsApartSection')
+data.setCell(28, 1, 'megamenuNavigation')
 data.setCell(28, 2, 'Tests.HomepageTest')
-data.setCell(28, 3, 3377);
+data.setCell(28, 3, 3540);
 data.setCell(29, 0, 29)
-data.setCell(29, 1, 'megamenuNavigation')
+data.setCell(29, 1, 'announcementBarNavigation')
 data.setCell(29, 2, 'Tests.HomepageTest')
-data.setCell(29, 3, 3361);
+data.setCell(29, 3, 3513);
 data.setCell(30, 0, 30)
-data.setCell(30, 1, 'logoVerification')
-data.setCell(30, 2, 'Tests.HomepageTest')
-data.setCell(30, 3, 2791);
+data.setCell(30, 1, 'addToCartFromPDP')
+data.setCell(30, 2, 'Tests.ProductdetaislTest')
+data.setCell(30, 3, 2895);
 data.setCell(31, 0, 31)
-data.setCell(31, 1, 'addToCartFromPDP')
-data.setCell(31, 2, 'Tests.ProductdetaislTest')
-data.setCell(31, 3, 2688);
+data.setCell(31, 1, 'verifyDiscoverOurStorySection')
+data.setCell(31, 2, 'Tests.HomepageTest')
+data.setCell(31, 3, 2711);
 data.setCell(32, 0, 32)
-data.setCell(32, 1, 'verifyHeroBannerLinkNavigation')
+data.setCell(32, 1, 'aboutUsPageNavigation')
 data.setCell(32, 2, 'Tests.HomepageTest')
 data.setCell(32, 3, 2518);
 data.setCell(33, 0, 33)
 data.setCell(33, 1, 'youMayAlsoLikeSectionPDP')
 data.setCell(33, 2, 'Tests.ProductdetaislTest')
-data.setCell(33, 3, 2361);
+data.setCell(33, 3, 2367);
 data.setCell(34, 0, 34)
-data.setCell(34, 1, 'detailsSection')
+data.setCell(34, 1, 'reviewsSection')
 data.setCell(34, 2, 'Tests.ProductdetaislTest')
-data.setCell(34, 3, 2361);
+data.setCell(34, 3, 2354);
 data.setCell(35, 0, 35)
-data.setCell(35, 1, 'reviewsSection')
+data.setCell(35, 1, 'detailsSection')
 data.setCell(35, 2, 'Tests.ProductdetaislTest')
-data.setCell(35, 3, 2343);
+data.setCell(35, 3, 2350);
 data.setCell(36, 0, 36)
-data.setCell(36, 1, 'verifyDiscoverBeautyBillSection')
-data.setCell(36, 2, 'Tests.HomepageTest')
-data.setCell(36, 3, 2101);
+data.setCell(36, 1, 'priceUpdateVerification')
+data.setCell(36, 2, 'Tests.CartTest')
+data.setCell(36, 3, 2064);
 data.setCell(37, 0, 37)
-data.setCell(37, 1, 'priceUpdateVerification')
-data.setCell(37, 2, 'Tests.CartTest')
-data.setCell(37, 3, 2052);
+data.setCell(37, 1, 'viewAllRedirection')
+data.setCell(37, 2, 'Tests.ProductlistingpageTest')
+data.setCell(37, 3, 1876);
 data.setCell(38, 0, 38)
-data.setCell(38, 1, 'invalidPincodeCheck')
-data.setCell(38, 2, 'Tests.ProductdetaislTest')
-data.setCell(38, 3, 2010);
+data.setCell(38, 1, 'verifyDiscoverBeautyBillSection')
+data.setCell(38, 2, 'Tests.HomepageTest')
+data.setCell(38, 3, 1712);
 data.setCell(39, 0, 39)
-data.setCell(39, 1, 'viewAllRedirection')
+data.setCell(39, 1, 'writeToUsRedirection')
 data.setCell(39, 2, 'Tests.ProductlistingpageTest')
-data.setCell(39, 3, 1768);
+data.setCell(39, 3, 1710);
 data.setCell(40, 0, 40)
-data.setCell(40, 1, 'beautyArchivesPageNavigation')
+data.setCell(40, 1, 'verifyHeroBannerLinkNavigation')
 data.setCell(40, 2, 'Tests.HomepageTest')
-data.setCell(40, 3, 1732);
+data.setCell(40, 3, 1683);
 data.setCell(41, 0, 41)
-data.setCell(41, 1, 'verifyDiscoverOurStorySection')
+data.setCell(41, 1, 'beautyArchivesPageNavigation')
 data.setCell(41, 2, 'Tests.HomepageTest')
-data.setCell(41, 3, 1661);
+data.setCell(41, 3, 1648);
 data.setCell(42, 0, 42)
-data.setCell(42, 1, 'writeToUsRedirection')
-data.setCell(42, 2, 'Tests.ProductlistingpageTest')
-data.setCell(42, 3, 1448);
+data.setCell(42, 1, 'contactUsPageNavigation')
+data.setCell(42, 2, 'Tests.HomepageTest')
+data.setCell(42, 3, 1601);
 data.setCell(43, 0, 43)
-data.setCell(43, 1, 'knowYourIngredientsPageNavigation')
+data.setCell(43, 1, 'logoVerification')
 data.setCell(43, 2, 'Tests.HomepageTest')
-data.setCell(43, 3, 1330);
+data.setCell(43, 3, 1481);
 data.setCell(44, 0, 44)
-data.setCell(44, 1, 'validPincodeCheck')
-data.setCell(44, 2, 'Tests.ProductdetaislTest')
-data.setCell(44, 3, 1288);
+data.setCell(44, 1, 'knowYourIngredientsPageNavigation')
+data.setCell(44, 2, 'Tests.HomepageTest')
+data.setCell(44, 3, 1362);
 data.setCell(45, 0, 45)
-data.setCell(45, 1, 'youMayAlsoLikeSection')
-data.setCell(45, 2, 'Tests.ProductlistingpageTest')
-data.setCell(45, 3, 1282);
+data.setCell(45, 1, 'invalidPincodeCheck')
+data.setCell(45, 2, 'Tests.ProductdetaislTest')
+data.setCell(45, 3, 1213);
 data.setCell(46, 0, 46)
-data.setCell(46, 1, 'aboutUsPageNavigation')
-data.setCell(46, 2, 'Tests.HomepageTest')
-data.setCell(46, 3, 1254);
+data.setCell(46, 1, 'validPincodeCheck')
+data.setCell(46, 2, 'Tests.ProductdetaislTest')
+data.setCell(46, 3, 1077);
 data.setCell(47, 0, 47)
-data.setCell(47, 1, 'contactUsPageNavigation')
-data.setCell(47, 2, 'Tests.HomepageTest')
-data.setCell(47, 3, 1216);
+data.setCell(47, 1, 'youMayAlsoLikeSection')
+data.setCell(47, 2, 'Tests.ProductlistingpageTest')
+data.setCell(47, 3, 680);
 data.setCell(48, 0, 48)
-data.setCell(48, 1, 'faqsSection')
-data.setCell(48, 2, 'Tests.ProductlistingpageTest')
-data.setCell(48, 3, 546);
+data.setCell(48, 1, 'verifyReelsSection')
+data.setCell(48, 2, 'Tests.HomepageTest')
+data.setCell(48, 3, 519);
 data.setCell(49, 0, 49)
-data.setCell(49, 1, 'verifyReelsSection')
-data.setCell(49, 2, 'Tests.HomepageTest')
-data.setCell(49, 3, 529);
+data.setCell(49, 1, 'faqsSection')
+data.setCell(49, 2, 'Tests.ProductlistingpageTest')
+data.setCell(49, 3, 508);
 data.setCell(50, 0, 50)
-data.setCell(50, 1, 'beautyArchivesSection')
-data.setCell(50, 2, 'Tests.ProductlistingpageTest')
-data.setCell(50, 3, 474);
+data.setCell(50, 1, 'verifyCustomerLoveSection')
+data.setCell(50, 2, 'Tests.HomepageTest')
+data.setCell(50, 3, 412);
 data.setCell(51, 0, 51)
 data.setCell(51, 1, 'verifyCautionNotice')
 data.setCell(51, 2, 'Tests.HomepageTest')
-data.setCell(51, 3, 413);
+data.setCell(51, 3, 368);
 data.setCell(52, 0, 52)
-data.setCell(52, 1, 'verifyCustomerLoveSection')
-data.setCell(52, 2, 'Tests.HomepageTest')
-data.setCell(52, 3, 397);
+data.setCell(52, 1, 'beautyArchivesSection')
+data.setCell(52, 2, 'Tests.ProductlistingpageTest')
+data.setCell(52, 3, 352);
 data.setCell(53, 0, 53)
 data.setCell(53, 1, 'freeBieProduct')
 data.setCell(53, 2, 'Tests.CartTest')
-data.setCell(53, 3, 72);
+data.setCell(53, 3, 48);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -1156,269 +1114,267 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">loginPageNavigation</span>
-                <span class="method-start">5492 ms</span>
+                <span class="method-start">4453 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">createAccount</span>
-                <span class="method-start">10050 ms</span>
+                <span class="method-start">9167 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">login</span>
-                <span class="method-start">26876 ms</span>
+                <span class="method-start">23344 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">42382 ms</span>
+                <span class="method-start">35997 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.HomepageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">43178 ms</span>
+                <span class="method-start">36348 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">logoVerification</span>
-                <span class="method-start">48269 ms</span>
+                <span class="method-start">39660 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">announcementBarNavigation</span>
-                <span class="method-start">51060 ms</span>
+                <span class="method-start">41149 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">megamenuNavigation</span>
-                <span class="method-start">56031 ms</span>
+                <span class="method-start">44669 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">aboutUsPageNavigation</span>
-                <span class="method-start">59394 ms</span>
+                <span class="method-start">48217 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">knowYourIngredientsPageNavigation</span>
-                <span class="method-start">60712 ms</span>
+                <span class="method-start">50735 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">beautyArchivesPageNavigation</span>
-                <span class="method-start">62046 ms</span>
+                <span class="method-start">52100 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">contactUsPageNavigation</span>
-                <span class="method-start">63788 ms</span>
+                <span class="method-start">53751 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyHeroBannerLinkNavigation</span>
-                <span class="method-start">65011 ms</span>
+                <span class="method-start">55358 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyCollectionTabsNavigation</span>
-                <span class="method-start">67529 ms</span>
+                <span class="method-start">57044 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyProductNavigationFromCollectionTab</span>
-                <span class="method-start">80325 ms</span>
+                <span class="method-start">70901 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyAddToCartFunctionality</span>
-                <span class="method-start">83860 ms</span>
+                <span class="method-start">76138 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyShopByConcernSection</span>
-                <span class="method-start">97148 ms</span>
+                <span class="method-start">87021 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyDiscoverBeautyBillSection</span>
-                <span class="method-start">111116 ms</span>
+                <span class="method-start">99706 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">verifyInTheSpotlightSection</span>
-                <span class="method-start">113217 ms</span>
+                <span class="method-start">101421 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyWhatSetsUsApartSection</span>
-                <span class="method-start">121038 ms</span>
+                <span class="method-start">109314 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyReelsSection</span>
-                <span class="method-start">124421 ms</span>
+                <span class="method-start">113270 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyCustomerLoveSection</span>
-                <span class="method-start">124950 ms</span>
+                <span class="method-start">113797 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyDiscoverOurStorySection</span>
-                <span class="method-start">125351 ms</span>
+                <span class="method-start">114215 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyBeautyArchivesSection</span>
-                <span class="method-start">127031 ms</span>
+                <span class="method-start">116930 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyNewsletterSubscription</span>
-                <span class="method-start">130991 ms</span>
+                <span class="method-start">121139 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyFooterProductLinks</span>
-                <span class="method-start">142868 ms</span>
+                <span class="method-start">131319 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyFooterConcernLinks</span>
-                <span class="method-start">165678 ms</span>
+                <span class="method-start">151929 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyFooterQuickLinks</span>
-                <span class="method-start">185760 ms</span>
+                <span class="method-start">169722 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyFooterLegalLinks</span>
-                <span class="method-start">199090 ms</span>
+                <span class="method-start">183036 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyFooterSocialMediaLinks</span>
-                <span class="method-start">211084 ms</span>
+                <span class="method-start">196418 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyCautionNotice</span>
-                <span class="method-start">220099 ms</span>
+                <span class="method-start">203697 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">220512 ms</span>
+                <span class="method-start">204069 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.ProductlistingpageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">221102 ms</span>
+                <span class="method-start">204464 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">hpToPlpNavigation</span>
-                <span class="method-start">228134 ms</span>
+                <span class="method-start">207895 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">appliedFilters</span>
-                <span class="method-start">234157 ms</span>
+                <span class="method-start">213427 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">filteredproducts</span>
-                <span class="method-start">242907 ms</span>
+                <span class="method-start">242206 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">clearFilters</span>
-                <span class="method-start">246448 ms</span>
+                <span class="method-start">245781 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addToCartFromPLP</span>
-                <span class="method-start">251175 ms</span>
+                <span class="method-start">250448 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">youMayAlsoLikeSection</span>
-                <span class="method-start">257416 ms</span>
+                <span class="method-start">255631 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">beautyArchivesSection</span>
-                <span class="method-start">258701 ms</span>
+                <span class="method-start">256317 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">viewAllRedirection</span>
-                <span class="method-start">259180 ms</span>
+                <span class="method-start">256674 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">faqsSection</span>
-                <span class="method-start">260948 ms</span>
+                <span class="method-start">258553 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">writeToUsRedirection</span>
-                <span class="method-start">261494 ms</span>
+                <span class="method-start">259069 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">262943 ms</span>
+                <span class="method-start">260788 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.ProductdetaislTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">263317 ms</span>
+                <span class="method-start">261093 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">hpToPdpNavigation</span>
-                <span class="method-start">269407 ms</span>
+                <span class="method-start">264290 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">pdpToPlpNavigation</span>
-                <span class="method-start">277537 ms</span>
+                <span class="method-start">270868 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">invalidPincodeCheck</span>
-                <span class="method-start">285940 ms</span>
+                <span class="method-start">276365 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validPincodeCheck</span>
-                <span class="method-start">287951 ms</span>
+                <span class="method-start">277579 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addToCartFromPDP</span>
-                <span class="method-start">289239 ms</span>
+                <span class="method-start">278663 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">quantityIncrease</span>
-                <span class="method-start">291930 ms</span>
+                <span class="method-start">281558 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">quantityDecrease</span>
-                <span class="method-start">296874 ms</span>
+                <span class="method-start">285929 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">reviewsSection</span>
-                <span class="method-start">301441 ms</span>
+                <span class="method-start">290428 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">detailsSection</span>
-                <span class="method-start">303785 ms</span>
+                <span class="method-start">292793 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">youMayAlsoLikeSectionPDP</span>
-                <span class="method-start">306147 ms</span>
+                <span class="method-start">295157 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">308510 ms</span>
+                <span class="method-start">297524 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.CartTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">308953 ms</span>
+                <span class="method-start">297994 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">emptyCart</span>
-                <span class="method-start">316145 ms</span>
+                <span class="method-start">300890 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addToCartFromPDP</span>
-                <span class="method-start">322691 ms</span>
+                <span class="method-start">305106 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">priceUpdateVerification</span>
-                <span class="method-start">342565 ms</span>
+                <span class="method-start">318481 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">freeBieProduct</span>
-                <span class="method-start">344619 ms</span>
+                <span class="method-start">320545 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">checkout</span>
-                <span class="method-start">344697 ms</span>
+                <span class="method-start">320609 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">350298 ms</span>
+                <span class="method-start">324814 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -33,6 +33,8 @@ public class ProductlistingpageTest extends BaseClass {
 		String expectedUrl = "https://lovebeautyandplanet.in/collections/buy3-1399";
 		String actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(actualUrl, expectedUrl);
+		plp.refreshPage();
+
 	}
 
 	// Case 2: Verify applied filters are displayed in PLP page
@@ -55,6 +57,8 @@ public class ProductlistingpageTest extends BaseClass {
 		String actualPro = pdp.getProductTitle().getText();
 		Assert.assertEquals(actualPro, productTitle, "Product title mismatch after redirection");
 		plp.navigateBack();
+		plp.refreshPage();
+
 	}
 
 	// Case 4: Verify if user is able to clear applied filters in PLP page

@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="genericUtility.Listeners"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Tests.HomepageTest">
+      <class name="Tests.ProductdetaislTest">
         <methods>
           <include name="launchApplication"/>
+          <include name="quantityDecrease"/>
           <include name="teardown"/>
-          <include name="verifyInTheSpotlightSection"/>
+          <include name="quantityIncrease"/>
+          <include name="detailsSection"/>
+          <include name="validPincodeCheck"/>
+          <include name="addToCartFromPDP"/>
+          <include name="reviewsSection"/>
+          <include name="hpToPdpNavigation"/>
+          <include name="invalidPincodeCheck"/>
+          <include name="pdpToPlpNavigation"/>
+          <include name="youMayAlsoLikeSectionPDP"/>
         </methods>
-      </class> <!-- Tests.HomepageTest -->
+      </class> <!-- Tests.ProductdetaislTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

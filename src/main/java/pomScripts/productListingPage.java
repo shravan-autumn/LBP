@@ -41,7 +41,7 @@ public class productListingPage extends BaseClass {
 	private WebElement filterHeading;
 	@FindBy(xpath = "//a[@class='active-facets__button active-facets__button--light']")
 	private List<WebElement> appliedFilter;
-	@FindBy(xpath = "(//span[text()='Clear all'])[1]")
+	@FindBy(xpath = "//div[@class='active-facets-vertical-filter']//span[text()='Clear all']")
 	private WebElement clearAllLink;
 
 	public WebElement getFilterHeading() {

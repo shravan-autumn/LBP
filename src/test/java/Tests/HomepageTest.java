@@ -122,7 +122,8 @@ public class HomepageTest extends BaseClass {
 		for (int i = 0; i < hp.getAllCollectionTabs().size(); i++) {
 			hp.clickTabAndRedirect(i);
 			Assert.assertTrue(driver.getCurrentUrl().contains("collections"), "URL does not contain expected text");
-			hp.navigateBack();
+			//hp.navigateBack();
+			hp.clickLogo();
 		}
 	}
 

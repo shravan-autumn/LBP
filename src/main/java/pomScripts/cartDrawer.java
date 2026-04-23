@@ -57,7 +57,7 @@ public class cartDrawer extends BaseClass {
 		this.closeCartDrawerButton = closeCartDrawerButton;
 	}
 
-	@FindBy(xpath = "(//input[contains(@class,'quantity__input')])[2]")
+	@FindBy(xpath = "//button[contains(text(),'View offers')]/parent::quantity-popover//input")
 	private WebElement quantityTextFieldCartDrawer;
 
 	public WebElement getQuantityTextFieldCartDrawer() {

@@ -41,13 +41,13 @@ public class homePage extends BaseClass {
 	@FindBy(xpath = "//a[text()='Offers']")
 	private WebElement megamenuOffersLink;
 
-	@FindBy(xpath = "(//a[contains(text(),'About')])[1]")
+	@FindBy(xpath = "//div[@class='nav d-none d-lg-block']//a[contains(text(),'About Us')]")
 	private WebElement megamenuAboutusLink;
 
-	@FindBy(xpath = "(//a[contains(text(),'Know')])[1]")
+	@FindBy(xpath = "//div[@class='nav d-none d-lg-block']//a[contains(text(),'Know Your Ingredients')]")
 	private WebElement megamenuKnowyouringredientsLink;
 
-	@FindBy(xpath = "(//a[contains(text(),'Beauty')])[1]")
+	@FindBy(xpath = "//div[@class='nav d-none d-lg-block']//a[contains(text(),'Beauty Archives')]")
 	private WebElement megamenuBeautyArchivesLink;
 
 	@FindBy(xpath = "//a[text()='Support']")
@@ -71,7 +71,7 @@ public class homePage extends BaseClass {
 	@FindBy(xpath = "//a[text()='BUY4@1799']")
 	private WebElement buy4At1799Link;
 
-	@FindBy(xpath = "(//input[@type='search'])[2]")
+	@FindBy(xpath = "//div[@class='header__icons header__icons--localization header-localization']//input[@type='search']")
 	private WebElement searchTextField;
 
 	@FindBy(xpath = "//a[contains(@class,'header__icon--cart')]")
@@ -80,6 +80,9 @@ public class homePage extends BaseClass {
 	@FindBy(xpath = "//a[@class='announcement']")
 	private WebElement announcementBar;
 
+	
+	
+	
 	public WebElement getLogo() {
 		return logo;
 	}
@@ -365,7 +368,7 @@ public class homePage extends BaseClass {
 	}
 
 	// tab section redirection action
-	public void clickTabAndRedirect(int a) {
+	public void clickTabAndRedirect(int a){
 		webdriverUtility.toScrollToElement(getCombosTab(), driver);
 		getAllCollectionTabs().get(a).click();
 		webdriverUtility.toScrollToElement(getViewAllLink().get(a), driver);
@@ -484,7 +487,7 @@ public class homePage extends BaseClass {
 
 	// discover beauty bill section
 
-	@FindBy(xpath = "(//div[@class='hos-cont'])[1]")
+	@FindBy(xpath = "//h3[contains(text(),'Discover Beauty Bill')]//ancestor::section//a[@href='/pages/beauty-bill']")
 	private WebElement discoverBeautyBillSection;
 
 	public WebElement getDiscoverBeautyBillSection() {
@@ -494,7 +497,7 @@ public class homePage extends BaseClass {
 	public void setDiscoverBeautyBillSection(WebElement discoverBeautyBillSection) {
 		this.discoverBeautyBillSection = discoverBeautyBillSection;
 	}
-
+ 
 	// beauty bill section action method
 	public void clickDiscoverBeautyBill() {
 		webdriverUtility.toScrollToElement(getDiscoverBeautyBillSection(), driver);
@@ -522,13 +525,13 @@ public class homePage extends BaseClass {
 	private WebElement leftArrow;
 
 	// ADD TO CART button inside active slide
-	@FindBy(xpath = "(//div[text()='in the spotlight']//parent::div[@class='container']//descendant::div[@class='owl-item active']//button[@name='add'])[1]")
+	@FindBy(xpath = "//div[text()='in the spotlight']//parent::div[@class='container']//descendant::div[@class='owl-item active']//button[@name='add']")
 	private WebElement addToCartButton;
 
 	@FindBy(xpath = "//div[text()='in the spotlight']//parent::div[@class='container']//descendant::div[@class='owl-item active']//div[@class='h-spotlight--name-review']//p")
 	private WebElement activeSlideProductName;
 
-	// ===== ACTION METHODS =====
+	//ACTION METHODS
 
 	public WebElement getActiveSlideProductName() {
 		return activeSlideProductName;
@@ -699,9 +702,9 @@ public class homePage extends BaseClass {
 	}
 
 //discover our story section
-	@FindBy(xpath = "(//div[@class='hos-cont'])[3]")
+	@FindBy(xpath = "//h3[contains(text(),'Discover our story')]/ancestor::section//div[@class='hos-cont']")
 	private WebElement discoverOurStorySection;
-	@FindBy(xpath = "(//div[@class='hi-cont'])[1]")
+	@FindBy(xpath = "//section[@class='home-ingredients']/child::div[@class='container']//div")
 	private WebElement discoverOurStorySection2;
 
 	public WebElement getDiscoverOurStorySection() {
@@ -804,9 +807,9 @@ public class homePage extends BaseClass {
 	}
 
 	// newsletter subscription
-	@FindBy(xpath = "(//input[@type='email'])[2]")
+	@FindBy(xpath = "//div[@class='field']//input")
 	private WebElement newsletterEmailTextField;
-	@FindBy(xpath = "(//input[@type='checkbox'])[2]")
+	@FindBy(xpath = "//label[@class='newsletter-consent consent-statement']//input")
 	private WebElement newsletterCheckbox;
 	@FindBy(xpath = "//button[@id='Subscribe']")
 	private WebElement newsletterSubscribeButton;
@@ -930,7 +933,7 @@ public class homePage extends BaseClass {
 		this.copyrightNotice = copyrightNotice;
 	}
 
-	@FindBy(xpath = "(//div[@class='be_beautiful__container'])[2]")
+	@FindBy(xpath = "//div[@class='footer-block col-md-2']//div[@class='be_beautiful__container']")
 	private WebElement beBeautifulSection;
 
 	public WebElement getBeBeautifulSection() {
@@ -943,11 +946,11 @@ public class homePage extends BaseClass {
 
 
 	// social media links
-	@FindBy(xpath = "(//a[@href='https://www.facebook.com/lovebeautyandplanetin'])[2]")
+	@FindBy(xpath = "//div[@class='footer__blocks-wrapper desktop_only ft-blwr-desk row']//a[@href='https://www.facebook.com/lovebeautyandplanetin']")
 	private WebElement facebookLink;
-	@FindBy(xpath = "(//img[@class='icon-insta'])[2]")
+	@FindBy(xpath = "//div[@class='footer__blocks-wrapper desktop_only ft-blwr-desk row']//a[@href='https://www.instagram.com/lovebeautyandplanet_in/']")
 	private WebElement instagramLink;
-	@FindBy(xpath = "(//a[@href='https://www.youtube.com/channel/UCUFcrEf1Wb1164G6O2_LoyA'])[2]")
+	@FindBy(xpath = "//div[@class='footer__blocks-wrapper desktop_only ft-blwr-desk row']//a[@href='https://www.youtube.com/channel/UCUFcrEf1Wb1164G6O2_LoyA']")
 	private WebElement youtubeLink;
 
 	public WebElement getFacebookLink() {

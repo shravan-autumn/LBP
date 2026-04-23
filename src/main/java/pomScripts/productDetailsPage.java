@@ -39,7 +39,7 @@ public class productDetailsPage {
 	@FindBy(xpath = "//a[text()='View Products']")
 	private WebElement viewAllProductsLink;
 
-	@FindBy(xpath = "(//a[text()='view products'])[1]")
+	@FindBy(xpath = "//span[contains(text(), 'Buy any 3 products at ₹1399 only')]/parent::div[@class='pdp-offer']//a")
 	private WebElement viewBundleProductsLink;
 	@FindBy(xpath = "//input[@id='pincode']")
 	private WebElement pincodeTextField;
@@ -49,9 +49,9 @@ public class productDetailsPage {
 	private WebElement invalidPincodeErrorMessage;
 	@FindBy(xpath = "//p[@id='order-timeline']")
 	private WebElement validPincodeErrorMessage;
-	@FindBy(xpath = "(//div[@class='product-form__buttons'])[1]")
+	@FindBy(xpath = "//product-form[@class='product-form pdp-atc']")
 	private WebElement addToCartButton;
-	@FindBy(xpath = "(//quantity-input[@class='quantity cart-quantity pdp-quantity ']//button[@type='button'])[1]")
+	@FindBy(xpath = "//quantity-input[@class='quantity cart-quantity pdp-quantity ']//button[@type='button']")
 	private WebElement quantityMinusButton;
 	@FindBy(xpath = "//div[@class='pdp-quantity-selector product-form__input product-form__quantity']//button[@name='plus']")
 	private WebElement quantityPlusButton;
@@ -147,7 +147,7 @@ public class productDetailsPage {
 		this.viewCartDrawerButton = viewCartDrawerButton;
 	}
 
-	@FindBy(xpath = "(//input[@class='quantity__input'])[1]")
+	@FindBy(xpath = "//product-info//quantity-input[@class='quantity cart-quantity pdp-quantity ']//input[@type='number']")
 	private WebElement quantityTextField;
 
 	public WebElement getQuantityTextField() {
@@ -199,7 +199,7 @@ public class productDetailsPage {
 		this.youMayAlsoLikeSection = youMayAlsoLikeSection;
 	}
 
-	@FindBy(xpath = "(//div[@class='product-form__buttons'])[5]")
+	@FindBy(xpath = "//product-form[@class='product-form pdp-atc']")//"(//div[@class='product-form__buttons'])[5]"
 	private WebElement addToCart2;
 
 	public WebElement getAddToCart2() {

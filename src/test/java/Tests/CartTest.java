@@ -77,7 +77,8 @@ public class CartTest extends BaseClass {
 		hp.getSearchTextField().sendKeys("body");
 		hp.clickSearchButton();
 		plp = new productListingPage(driver);
-		String product2 = "Coconut Water & Mimosa Flower Conditioner - 200 ml";
+		//String product2 = "Coconut Water & Mimosa Flower Conditioner - 200 ml";
+		String product2 = "Argan Oil & Lavender Heat Protect & Conditioning Mist";
 		for (WebElement ele1 : plp.getProductLinksSearchPLP()) {
 			if (ele1.getText().equalsIgnoreCase(product2)) {
 				webdriverUtility.toScrollToElement(ele1, driver);

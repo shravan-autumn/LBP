@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>53/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>54/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Apr 11 22:14:52 IST 2026</td>
+<td>Started on:</td><td>Thu Apr 23 16:21:00 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>351 seconds (351570 ms)</td>
+<tr><td>Total time:</td><td>325 seconds (325126 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,97 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='Tests.HomepageTest.verifyInTheSpotlightSection()'><b>verifyInTheSpotlightSection</b><br>Test class: Tests.HomepageTest</td>
-<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=146.0.7680.178)
-Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3730fc789148031849249136bc5864ad, clickElement {id=f.010C4565694B37DAD76FE713605F419D.d.C049E00B022A78094E909716808B0B56.e.4544}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\OrCon\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65207}, goog:processID: 18820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65207/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3730fc789148031849249136bc5864ad)] -&gt; xpath: (//div[text()=&apos;in the spotlight&apos;]//parent::div[@class=&apos;container&apos;]//descendant::div[@class=&apos;owl-item active&apos;]//button[@name=&apos;add&apos;])[1]]
-Session ID: 3730fc789148031849249136bc5864ad
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
-	at pomScripts.homePage.clickAddToCartInSpotlight(homePage.java:591)
-	at Tests.HomepageTest.verifyInTheSpotlightSection(HomepageTest.java:235)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace937777177", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace937777177'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=146.0.7680.178)
-Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3730fc789148031849249136bc5864ad, clickElement {id=f.010C4565694B37DAD76FE713605F419D.d.C049E00B022A78094E909716808B0B56.e.4544}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\OrCon\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65207}, goog:processID: 18820, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65207/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3730fc789148031849249136bc5864ad)] -&gt; xpath: (//div[text()=&apos;in the spotlight&apos;]//parent::div[@class=&apos;container&apos;]//descendant::div[@class=&apos;owl-item active&apos;]//button[@name=&apos;add&apos;])[1]]
-Session ID: 3730fc789148031849249136bc5864ad
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
-	at pomScripts.homePage.clickAddToCartInSpotlight(homePage.java:591)
-	at Tests.HomepageTest.verifyInTheSpotlightSection(HomepageTest.java:235)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>7</td>
-<td>Tests.HomepageTest@67f77f6e</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -167,14 +76,24 @@ Session ID: 3730fc789148031849249136bc5864ad
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Tests.HomepageTest.verifyFooterLegalLinks()'><b>verifyFooterLegalLinks</b><br>Test class: Tests.HomepageTest</td>
+<td title='Tests.HomepageTest.verifyAddToCartFunctionality()'><b>verifyAddToCartFunctionality</b><br>Test class: Tests.HomepageTest</td>
 <td></td>
-<td>11</td>
+<td>10</td>
 <td>Tests.HomepageTest@67f77f6e</td></tr>
 <tr>
-<td title='Tests.HomepageTest.aboutUsPageNavigation()'><b>aboutUsPageNavigation</b><br>Test class: Tests.HomepageTest</td>
+<td title='Tests.HomepageTest.verifyProductNavigationFromCollectionTab()'><b>verifyProductNavigationFromCollectionTab</b><br>Test class: Tests.HomepageTest</td>
+<td></td>
+<td>5</td>
+<td>Tests.HomepageTest@67f77f6e</td></tr>
+<tr>
+<td title='Tests.HomepageTest.verifyHeroBannerLinkNavigation()'><b>verifyHeroBannerLinkNavigation</b><br>Test class: Tests.HomepageTest</td>
 <td></td>
 <td>1</td>
+<td>Tests.HomepageTest@67f77f6e</td></tr>
+<tr>
+<td title='Tests.HomepageTest.verifyShopByConcernSection()'><b>verifyShopByConcernSection</b><br>Test class: Tests.HomepageTest</td>
+<td></td>
+<td>12</td>
 <td>Tests.HomepageTest@67f77f6e</td></tr>
 <tr>
 <td title='Tests.HomepageTest.knowYourIngredientsPageNavigation()'><b>knowYourIngredientsPageNavigation</b><br>Test class: Tests.HomepageTest</td>
@@ -182,47 +101,82 @@ Session ID: 3730fc789148031849249136bc5864ad
 <td>1</td>
 <td>Tests.HomepageTest@67f77f6e</td></tr>
 <tr>
-<td title='Tests.ProductdetaislTest.pdpToPlpNavigation()'><b>pdpToPlpNavigation</b><br>Test class: Tests.ProductdetaislTest</td>
+<td title='Tests.ProductdetaislTest.quantityIncrease()'><b>quantityIncrease</b><br>Test class: Tests.ProductdetaislTest</td>
 <td></td>
-<td>8</td>
+<td>4</td>
 <td>Tests.ProductdetaislTest@7be1ce6a</td></tr>
 <tr>
-<td title='Tests.HomepageTest.logoVerification()'><b>logoVerification</b><br>Test class: Tests.HomepageTest</td>
+<td title='Tests.HomepageTest.verifyFooterConcernLinks()'><b>verifyFooterConcernLinks</b><br>Test class: Tests.HomepageTest</td>
+<td></td>
+<td>17</td>
+<td>Tests.HomepageTest@67f77f6e</td></tr>
+<tr>
+<td title='Tests.HomepageTest.verifyFooterSocialMediaLinks()'><b>verifyFooterSocialMediaLinks</b><br>Test class: Tests.HomepageTest</td>
+<td></td>
+<td>7</td>
+<td>Tests.HomepageTest@67f77f6e</td></tr>
+<tr>
+<td title='Tests.HomepageTest.verifyDiscoverOurStorySection()'><b>verifyDiscoverOurStorySection</b><br>Test class: Tests.HomepageTest</td>
 <td></td>
 <td>2</td>
 <td>Tests.HomepageTest@67f77f6e</td></tr>
 <tr>
-<td title='Tests.HomepageTest.verifyNewsletterSubscription()'><b>verifyNewsletterSubscription</b><br>Test class: Tests.HomepageTest</td>
+<td title='Tests.CartTest.checkout()'><b>checkout</b><br>Test class: Tests.CartTest</td>
 <td></td>
-<td>11</td>
-<td>Tests.HomepageTest@67f77f6e</td></tr>
-<tr>
-<td title='Tests.ProductlistingpageTest.hpToPlpNavigation()'><b>hpToPlpNavigation</b><br>Test class: Tests.ProductlistingpageTest</td>
-<td></td>
-<td>6</td>
-<td>Tests.ProductlistingpageTest@2b0b7e5a</td></tr>
-<tr>
-<td title='Tests.HomepageTest.verifyCollectionTabsNavigation()'><b>verifyCollectionTabsNavigation</b><br>Test class: Tests.HomepageTest</td>
-<td></td>
-<td>12</td>
-<td>Tests.HomepageTest@67f77f6e</td></tr>
-<tr>
-<td title='Tests.HomepageTest.verifyFooterConcernLinks()'><b>verifyFooterConcernLinks</b><br>Test class: Tests.HomepageTest</td>
-<td></td>
-<td>20</td>
-<td>Tests.HomepageTest@67f77f6e</td></tr>
-<tr>
-<td title='Tests.CartTest.emptyCart()'><b>emptyCart</b><br>Test class: Tests.CartTest</td>
-<td></td>
-<td>6</td>
+<td>4</td>
 <td>Tests.CartTest@3119cf6f</td></tr>
+<tr>
+<td title='Tests.HomepageTest.verifyFooterLegalLinks()'><b>verifyFooterLegalLinks</b><br>Test class: Tests.HomepageTest</td>
+<td></td>
+<td>13</td>
+<td>Tests.HomepageTest@67f77f6e</td></tr>
 <tr>
 <td title='Tests.LoginpageTest.login()'><b>login</b><br>Test class: Tests.LoginpageTest</td>
 <td></td>
-<td>15</td>
+<td>12</td>
 <td>Tests.LoginpageTest@161aa04a</td></tr>
 <tr>
 <td title='Tests.HomepageTest.contactUsPageNavigation()'><b>contactUsPageNavigation</b><br>Test class: Tests.HomepageTest</td>
+<td></td>
+<td>1</td>
+<td>Tests.HomepageTest@67f77f6e</td></tr>
+<tr>
+<td title='Tests.ProductlistingpageTest.faqsSection()'><b>faqsSection</b><br>Test class: Tests.ProductlistingpageTest</td>
+<td></td>
+<td>0</td>
+<td>Tests.ProductlistingpageTest@2b0b7e5a</td></tr>
+<tr>
+<td title='Tests.ProductdetaislTest.pdpToPlpNavigation()'><b>pdpToPlpNavigation</b><br>Test class: Tests.ProductdetaislTest</td>
+<td></td>
+<td>5</td>
+<td>Tests.ProductdetaislTest@7be1ce6a</td></tr>
+<tr>
+<td title='Tests.HomepageTest.verifyCollectionTabsNavigation()'><b>verifyCollectionTabsNavigation</b><br>Test class: Tests.HomepageTest</td>
+<td></td>
+<td>13</td>
+<td>Tests.HomepageTest@67f77f6e</td></tr>
+<tr>
+<td title='Tests.LoginpageTest.createAccount()'><b>createAccount</b><br>Test class: Tests.LoginpageTest</td>
+<td></td>
+<td>14</td>
+<td>Tests.LoginpageTest@161aa04a</td></tr>
+<tr>
+<td title='Tests.HomepageTest.aboutUsPageNavigation()'><b>aboutUsPageNavigation</b><br>Test class: Tests.HomepageTest</td>
+<td></td>
+<td>2</td>
+<td>Tests.HomepageTest@67f77f6e</td></tr>
+<tr>
+<td title='Tests.ProductdetaislTest.quantityDecrease()'><b>quantityDecrease</b><br>Test class: Tests.ProductdetaislTest</td>
+<td></td>
+<td>4</td>
+<td>Tests.ProductdetaislTest@7be1ce6a</td></tr>
+<tr>
+<td title='Tests.ProductdetaislTest.reviewsSection()'><b>reviewsSection</b><br>Test class: Tests.ProductdetaislTest</td>
+<td></td>
+<td>2</td>
+<td>Tests.ProductdetaislTest@7be1ce6a</td></tr>
+<tr>
+<td title='Tests.HomepageTest.logoVerification()'><b>logoVerification</b><br>Test class: Tests.HomepageTest</td>
 <td></td>
 <td>1</td>
 <td>Tests.HomepageTest@67f77f6e</td></tr>
@@ -232,159 +186,74 @@ Session ID: 3730fc789148031849249136bc5864ad
 <td>1</td>
 <td>Tests.ProductdetaislTest@7be1ce6a</td></tr>
 <tr>
-<td title='Tests.ProductlistingpageTest.viewAllRedirection()'><b>viewAllRedirection</b><br>Test class: Tests.ProductlistingpageTest</td>
-<td></td>
-<td>1</td>
-<td>Tests.ProductlistingpageTest@2b0b7e5a</td></tr>
-<tr>
-<td title='Tests.ProductdetaislTest.quantityIncrease()'><b>quantityIncrease</b><br>Test class: Tests.ProductdetaislTest</td>
-<td></td>
-<td>4</td>
-<td>Tests.ProductdetaislTest@7be1ce6a</td></tr>
-<tr>
-<td title='Tests.ProductdetaislTest.quantityDecrease()'><b>quantityDecrease</b><br>Test class: Tests.ProductdetaislTest</td>
-<td></td>
-<td>4</td>
-<td>Tests.ProductdetaislTest@7be1ce6a</td></tr>
-<tr>
 <td title='Tests.ProductdetaislTest.youMayAlsoLikeSectionPDP()'><b>youMayAlsoLikeSectionPDP</b><br>Test class: Tests.ProductdetaislTest</td>
 <td></td>
 <td>2</td>
 <td>Tests.ProductdetaislTest@7be1ce6a</td></tr>
 <tr>
-<td title='Tests.ProductlistingpageTest.addToCartFromPLP()'><b>addToCartFromPLP</b><br>Test class: Tests.ProductlistingpageTest</td>
-<td></td>
-<td>6</td>
-<td>Tests.ProductlistingpageTest@2b0b7e5a</td></tr>
-<tr>
-<td title='Tests.ProductdetaislTest.invalidPincodeCheck()'><b>invalidPincodeCheck</b><br>Test class: Tests.ProductdetaislTest</td>
-<td></td>
-<td>2</td>
-<td>Tests.ProductdetaislTest@7be1ce6a</td></tr>
-<tr>
-<td title='Tests.ProductlistingpageTest.faqsSection()'><b>faqsSection</b><br>Test class: Tests.ProductlistingpageTest</td>
-<td></td>
-<td>0</td>
-<td>Tests.ProductlistingpageTest@2b0b7e5a</td></tr>
-<tr>
-<td title='Tests.ProductdetaislTest.reviewsSection()'><b>reviewsSection</b><br>Test class: Tests.ProductdetaislTest</td>
-<td></td>
-<td>2</td>
-<td>Tests.ProductdetaislTest@7be1ce6a</td></tr>
-<tr>
-<td title='Tests.HomepageTest.verifyFooterQuickLinks()'><b>verifyFooterQuickLinks</b><br>Test class: Tests.HomepageTest</td>
-<td></td>
-<td>13</td>
-<td>Tests.HomepageTest@67f77f6e</td></tr>
-<tr>
-<td title='Tests.HomepageTest.verifyFooterSocialMediaLinks()'><b>verifyFooterSocialMediaLinks</b><br>Test class: Tests.HomepageTest</td>
-<td></td>
-<td>9</td>
-<td>Tests.HomepageTest@67f77f6e</td></tr>
-<tr>
-<td title='Tests.ProductdetaislTest.hpToPdpNavigation()'><b>hpToPdpNavigation</b><br>Test class: Tests.ProductdetaislTest</td>
-<td></td>
-<td>8</td>
-<td>Tests.ProductdetaislTest@7be1ce6a</td></tr>
-<tr>
-<td title='Tests.HomepageTest.verifyDiscoverBeautyBillSection()'><b>verifyDiscoverBeautyBillSection</b><br>Test class: Tests.HomepageTest</td>
-<td></td>
-<td>2</td>
-<td>Tests.HomepageTest@67f77f6e</td></tr>
-<tr>
-<td title='Tests.CartTest.priceUpdateVerification()'><b>priceUpdateVerification</b><br>Test class: Tests.CartTest</td>
-<td></td>
-<td>2</td>
-<td>Tests.CartTest@3119cf6f</td></tr>
-<tr>
 <td title='Tests.HomepageTest.verifyBeautyArchivesSection()'><b>verifyBeautyArchivesSection</b><br>Test class: Tests.HomepageTest</td>
 <td></td>
-<td>3</td>
-<td>Tests.HomepageTest@67f77f6e</td></tr>
-<tr>
-<td title='Tests.HomepageTest.verifyDiscoverOurStorySection()'><b>verifyDiscoverOurStorySection</b><br>Test class: Tests.HomepageTest</td>
-<td></td>
-<td>1</td>
-<td>Tests.HomepageTest@67f77f6e</td></tr>
-<tr>
-<td title='Tests.HomepageTest.verifyProductNavigationFromCollectionTab()'><b>verifyProductNavigationFromCollectionTab</b><br>Test class: Tests.HomepageTest</td>
-<td></td>
-<td>3</td>
-<td>Tests.HomepageTest@67f77f6e</td></tr>
-<tr>
-<td title='Tests.LoginpageTest.loginPageNavigation()'><b>loginPageNavigation</b><br>Test class: Tests.LoginpageTest</td>
-<td></td>
 <td>4</td>
-<td>Tests.LoginpageTest@161aa04a</td></tr>
-<tr>
-<td title='Tests.HomepageTest.verifyFooterProductLinks()'><b>verifyFooterProductLinks</b><br>Test class: Tests.HomepageTest</td>
-<td></td>
-<td>22</td>
 <td>Tests.HomepageTest@67f77f6e</td></tr>
 <tr>
-<td title='Tests.HomepageTest.verifyShopByConcernSection()'><b>verifyShopByConcernSection</b><br>Test class: Tests.HomepageTest</td>
+<td title='Tests.ProductdetaislTest.addToCartFromPDP()'><b>addToCartFromPDP</b><br>Test class: Tests.ProductdetaislTest</td>
 <td></td>
-<td>13</td>
-<td>Tests.HomepageTest@67f77f6e</td></tr>
+<td>2</td>
+<td>Tests.ProductdetaislTest@7be1ce6a</td></tr>
 <tr>
 <td title='Tests.CartTest.freeBieProduct()'><b>freeBieProduct</b><br>Test class: Tests.CartTest</td>
 <td></td>
 <td>0</td>
 <td>Tests.CartTest@3119cf6f</td></tr>
 <tr>
-<td title='Tests.LoginpageTest.createAccount()'><b>createAccount</b><br>Test class: Tests.LoginpageTest</td>
-<td></td>
-<td>16</td>
-<td>Tests.LoginpageTest@161aa04a</td></tr>
-<tr>
 <td title='Tests.ProductdetaislTest.detailsSection()'><b>detailsSection</b><br>Test class: Tests.ProductdetaislTest</td>
 <td></td>
 <td>2</td>
 <td>Tests.ProductdetaislTest@7be1ce6a</td></tr>
 <tr>
-<td title='Tests.CartTest.addToCartFromPDP()'><b>addToCartFromPDP</b><br>Test class: Tests.CartTest</td>
-<td></td>
-<td>19</td>
-<td>Tests.CartTest@3119cf6f</td></tr>
-<tr>
-<td title='Tests.HomepageTest.megamenuNavigation()'><b>megamenuNavigation</b><br>Test class: Tests.HomepageTest</td>
+<td title='Tests.HomepageTest.verifyWhatSetsUsApartSection()'><b>verifyWhatSetsUsApartSection</b><br>Test class: Tests.HomepageTest</td>
 <td></td>
 <td>3</td>
 <td>Tests.HomepageTest@67f77f6e</td></tr>
 <tr>
-<td title='Tests.HomepageTest.beautyArchivesPageNavigation()'><b>beautyArchivesPageNavigation</b><br>Test class: Tests.HomepageTest</td>
-<td></td>
-<td>1</td>
-<td>Tests.HomepageTest@67f77f6e</td></tr>
-<tr>
-<td title='Tests.CartTest.checkout()'><b>checkout</b><br>Test class: Tests.CartTest</td>
+<td title='Tests.ProductlistingpageTest.addToCartFromPLP()'><b>addToCartFromPLP</b><br>Test class: Tests.ProductlistingpageTest</td>
 <td></td>
 <td>5</td>
-<td>Tests.CartTest@3119cf6f</td></tr>
+<td>Tests.ProductlistingpageTest@2b0b7e5a</td></tr>
+<tr>
+<td title='Tests.ProductlistingpageTest.writeToUsRedirection()'><b>writeToUsRedirection</b><br>Test class: Tests.ProductlistingpageTest</td>
+<td></td>
+<td>1</td>
+<td>Tests.ProductlistingpageTest@2b0b7e5a</td></tr>
+<tr>
+<td title='Tests.ProductlistingpageTest.viewAllRedirection()'><b>viewAllRedirection</b><br>Test class: Tests.ProductlistingpageTest</td>
+<td></td>
+<td>1</td>
+<td>Tests.ProductlistingpageTest@2b0b7e5a</td></tr>
 <tr>
 <td title='Tests.HomepageTest.verifyCautionNotice()'><b>verifyCautionNotice</b><br>Test class: Tests.HomepageTest</td>
 <td></td>
 <td>0</td>
 <td>Tests.HomepageTest@67f77f6e</td></tr>
 <tr>
-<td title='Tests.ProductlistingpageTest.appliedFilters()'><b>appliedFilters</b><br>Test class: Tests.ProductlistingpageTest</td>
-<td></td>
-<td>8</td>
-<td>Tests.ProductlistingpageTest@2b0b7e5a</td></tr>
-<tr>
-<td title='Tests.HomepageTest.verifyAddToCartFunctionality()'><b>verifyAddToCartFunctionality</b><br>Test class: Tests.HomepageTest</td>
-<td></td>
-<td>13</td>
-<td>Tests.HomepageTest@67f77f6e</td></tr>
-<tr>
-<td title='Tests.ProductlistingpageTest.beautyArchivesSection()'><b>beautyArchivesSection</b><br>Test class: Tests.ProductlistingpageTest</td>
-<td></td>
-<td>0</td>
-<td>Tests.ProductlistingpageTest@2b0b7e5a</td></tr>
-<tr>
 <td title='Tests.HomepageTest.verifyReelsSection()'><b>verifyReelsSection</b><br>Test class: Tests.HomepageTest</td>
 <td></td>
 <td>0</td>
+<td>Tests.HomepageTest@67f77f6e</td></tr>
+<tr>
+<td title='Tests.CartTest.addToCartFromPDP()'><b>addToCartFromPDP</b><br>Test class: Tests.CartTest</td>
+<td></td>
+<td>13</td>
+<td>Tests.CartTest@3119cf6f</td></tr>
+<tr>
+<td title='Tests.HomepageTest.beautyArchivesPageNavigation()'><b>beautyArchivesPageNavigation</b><br>Test class: Tests.HomepageTest</td>
+<td></td>
+<td>1</td>
+<td>Tests.HomepageTest@67f77f6e</td></tr>
+<tr>
+<td title='Tests.HomepageTest.verifyDiscoverBeautyBillSection()'><b>verifyDiscoverBeautyBillSection</b><br>Test class: Tests.HomepageTest</td>
+<td></td>
+<td>1</td>
 <td>Tests.HomepageTest@67f77f6e</td></tr>
 <tr>
 <td title='Tests.ProductlistingpageTest.filteredproducts()'><b>filteredproducts</b><br>Test class: Tests.ProductlistingpageTest</td>
@@ -392,45 +261,90 @@ Session ID: 3730fc789148031849249136bc5864ad
 <td>3</td>
 <td>Tests.ProductlistingpageTest@2b0b7e5a</td></tr>
 <tr>
-<td title='Tests.HomepageTest.verifyWhatSetsUsApartSection()'><b>verifyWhatSetsUsApartSection</b><br>Test class: Tests.HomepageTest</td>
-<td></td>
-<td>3</td>
-<td>Tests.HomepageTest@67f77f6e</td></tr>
-<tr>
-<td title='Tests.HomepageTest.verifyHeroBannerLinkNavigation()'><b>verifyHeroBannerLinkNavigation</b><br>Test class: Tests.HomepageTest</td>
-<td></td>
-<td>2</td>
-<td>Tests.HomepageTest@67f77f6e</td></tr>
-<tr>
-<td title='Tests.ProductlistingpageTest.writeToUsRedirection()'><b>writeToUsRedirection</b><br>Test class: Tests.ProductlistingpageTest</td>
-<td></td>
-<td>1</td>
-<td>Tests.ProductlistingpageTest@2b0b7e5a</td></tr>
-<tr>
 <td title='Tests.HomepageTest.verifyCustomerLoveSection()'><b>verifyCustomerLoveSection</b><br>Test class: Tests.HomepageTest</td>
 <td></td>
 <td>0</td>
 <td>Tests.HomepageTest@67f77f6e</td></tr>
 <tr>
-<td title='Tests.HomepageTest.announcementBarNavigation()'><b>announcementBarNavigation</b><br>Test class: Tests.HomepageTest</td>
+<td title='Tests.HomepageTest.verifyFooterProductLinks()'><b>verifyFooterProductLinks</b><br>Test class: Tests.HomepageTest</td>
 <td></td>
-<td>4</td>
+<td>20</td>
 <td>Tests.HomepageTest@67f77f6e</td></tr>
 <tr>
-<td title='Tests.ProductlistingpageTest.youMayAlsoLikeSection()'><b>youMayAlsoLikeSection</b><br>Test class: Tests.ProductlistingpageTest</td>
+<td title='Tests.HomepageTest.verifyNewsletterSubscription()'><b>verifyNewsletterSubscription</b><br>Test class: Tests.HomepageTest</td>
 <td></td>
-<td>1</td>
+<td>10</td>
+<td>Tests.HomepageTest@67f77f6e</td></tr>
+<tr>
+<td title='Tests.CartTest.emptyCart()'><b>emptyCart</b><br>Test class: Tests.CartTest</td>
+<td></td>
+<td>4</td>
+<td>Tests.CartTest@3119cf6f</td></tr>
+<tr>
+<td title='Tests.ProductdetaislTest.hpToPdpNavigation()'><b>hpToPdpNavigation</b><br>Test class: Tests.ProductdetaislTest</td>
+<td></td>
+<td>6</td>
+<td>Tests.ProductdetaislTest@7be1ce6a</td></tr>
+<tr>
+<td title='Tests.HomepageTest.verifyInTheSpotlightSection()'><b>verifyInTheSpotlightSection</b><br>Test class: Tests.HomepageTest</td>
+<td></td>
+<td>7</td>
+<td>Tests.HomepageTest@67f77f6e</td></tr>
+<tr>
+<td title='Tests.HomepageTest.verifyFooterQuickLinks()'><b>verifyFooterQuickLinks</b><br>Test class: Tests.HomepageTest</td>
+<td></td>
+<td>13</td>
+<td>Tests.HomepageTest@67f77f6e</td></tr>
+<tr>
+<td title='Tests.ProductlistingpageTest.hpToPlpNavigation()'><b>hpToPlpNavigation</b><br>Test class: Tests.ProductlistingpageTest</td>
+<td></td>
+<td>5</td>
 <td>Tests.ProductlistingpageTest@2b0b7e5a</td></tr>
 <tr>
-<td title='Tests.ProductdetaislTest.addToCartFromPDP()'><b>addToCartFromPDP</b><br>Test class: Tests.ProductdetaislTest</td>
+<td title='Tests.HomepageTest.announcementBarNavigation()'><b>announcementBarNavigation</b><br>Test class: Tests.HomepageTest</td>
 <td></td>
-<td>2</td>
+<td>3</td>
+<td>Tests.HomepageTest@67f77f6e</td></tr>
+<tr>
+<td title='Tests.ProductdetaislTest.invalidPincodeCheck()'><b>invalidPincodeCheck</b><br>Test class: Tests.ProductdetaislTest</td>
+<td></td>
+<td>1</td>
 <td>Tests.ProductdetaislTest@7be1ce6a</td></tr>
+<tr>
+<td title='Tests.LoginpageTest.loginPageNavigation()'><b>loginPageNavigation</b><br>Test class: Tests.LoginpageTest</td>
+<td></td>
+<td>4</td>
+<td>Tests.LoginpageTest@161aa04a</td></tr>
+<tr>
+<td title='Tests.HomepageTest.megamenuNavigation()'><b>megamenuNavigation</b><br>Test class: Tests.HomepageTest</td>
+<td></td>
+<td>3</td>
+<td>Tests.HomepageTest@67f77f6e</td></tr>
+<tr>
+<td title='Tests.ProductlistingpageTest.appliedFilters()'><b>appliedFilters</b><br>Test class: Tests.ProductlistingpageTest</td>
+<td></td>
+<td>28</td>
+<td>Tests.ProductlistingpageTest@2b0b7e5a</td></tr>
+<tr>
+<td title='Tests.ProductlistingpageTest.beautyArchivesSection()'><b>beautyArchivesSection</b><br>Test class: Tests.ProductlistingpageTest</td>
+<td></td>
+<td>0</td>
+<td>Tests.ProductlistingpageTest@2b0b7e5a</td></tr>
 <tr>
 <td title='Tests.ProductlistingpageTest.clearFilters()'><b>clearFilters</b><br>Test class: Tests.ProductlistingpageTest</td>
 <td></td>
 <td>4</td>
 <td>Tests.ProductlistingpageTest@2b0b7e5a</td></tr>
+<tr>
+<td title='Tests.ProductlistingpageTest.youMayAlsoLikeSection()'><b>youMayAlsoLikeSection</b><br>Test class: Tests.ProductlistingpageTest</td>
+<td></td>
+<td>0</td>
+<td>Tests.ProductlistingpageTest@2b0b7e5a</td></tr>
+<tr>
+<td title='Tests.CartTest.priceUpdateVerification()'><b>priceUpdateVerification</b><br>Test class: Tests.CartTest</td>
+<td></td>
+<td>2</td>
+<td>Tests.CartTest@3119cf6f</td></tr>
 </table><p>
 </body>
 </html>
