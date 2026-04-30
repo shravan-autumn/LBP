@@ -11,6 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import genericUtility.BaseClass;
+import genericUtility.StepLogger;
 import genericUtility.webdriverUtility;
 import pomScripts.cartDrawer;
 import pomScripts.homePage;
@@ -28,6 +29,9 @@ public class CartTest extends BaseClass {
 	// case 1: verify if empty cart is redirected to collections page
 	@Test(priority = 1)
 	public void emptyCart() {
+		StepLogger.given("User is on homepage");
+		StepLogger.when("Click on cart icon and click on continue shopping");
+		StepLogger.then("User will be redirected to relevant PLP");
 		lp = new loginPage(driver);
 		hp = new homePage(driver);
 		lp.goToWebsite();
@@ -46,6 +50,15 @@ public class CartTest extends BaseClass {
 	// case 2: Verify if user is able to add multiple product to cart from PDP page
 	@Test(priority = 2)
 	public void addToCartFromPDP() throws InterruptedException {
+		StepLogger.given("User is on homepage");
+		StepLogger.when("User search for a product and select a product from search PLP");
+		StepLogger.then("User will be redirected to relevant PDP");
+		StepLogger.when("User scroll down and Click add to cart");
+		StepLogger.then("Relevant product should be added to cart");
+		StepLogger.and("User search for another product and select a product from search PLP");
+		StepLogger.then("User will be redirected to relevant PDP");
+		StepLogger.when("User scroll down and Click add to cart");
+		StepLogger.then("Relevant product should be added to cart");
 		lp = new loginPage(driver);
 		hp = new homePage(driver);
 		hp.clickSearchIcon();
@@ -77,8 +90,8 @@ public class CartTest extends BaseClass {
 		hp.getSearchTextField().sendKeys("body");
 		hp.clickSearchButton();
 		plp = new productListingPage(driver);
-		//String product2 = "Coconut Water & Mimosa Flower Conditioner - 200 ml";
-		String product2 = "Argan Oil & Lavender Heat Protect & Conditioning Mist";
+		String product2 = "Coconut Water & Mimosa Flower Conditioner - 400 ml";
+		//String product2 = "Argan Oil & Lavender Heat Protect & Conditioning Mist";
 		for (WebElement ele1 : plp.getProductLinksSearchPLP()) {
 			if (ele1.getText().equalsIgnoreCase(product2)) {
 				webdriverUtility.toScrollToElement(ele1, driver);
@@ -100,6 +113,16 @@ public class CartTest extends BaseClass {
 	// Case3: Verify if cart price updates when user adds multiple quantity to cart
 	@Test(priority = 3)
 	public void priceUpdateVerification() throws InterruptedException {
+		StepLogger.given("User is on homepage");
+		StepLogger.when("User search for a product and select a product from search PLP");
+		StepLogger.then("User will be redirected to relevant PDP");
+		StepLogger.when("User scroll down and Click add to cart");
+		StepLogger.then("Relevant product should be added to cart");
+		StepLogger.and("User search for another product and select a product from search PLP");
+		StepLogger.then("User will be redirected to relevant PDP");
+		StepLogger.when("User scroll down and Click add to cart");
+		StepLogger.then("Relevant product should be added to cart and prrice should be updated");
+		
 		cartDrawer c = new cartDrawer(driver);
 		String price = c.getTotalPrice().getText();
 		String sumof2products = "₹" + String.valueOf(Integer.parseInt(product1price) + Integer.parseInt(product2price));
@@ -113,6 +136,11 @@ public class CartTest extends BaseClass {
 	// quantity
 	@Test(priority = 4)
 	public void freeBieProduct() throws InterruptedException {
+		StepLogger.given("User is on homepage");
+		StepLogger.when("User search for a product and select a product from search PLP");
+		StepLogger.then("User will be redirected to relevant PDP");
+		StepLogger.when("User scroll down and Click add to cart");
+		StepLogger.then("Relevant product should be added to cart and freebie products should be displayed");
 		cartDrawer c = new cartDrawer(driver);
 		boolean freebieProdut = c.getFreeBieproduct().isDisplayed();
 		Assert.assertTrue(freebieProdut, "Freebie product is missing");
@@ -122,6 +150,13 @@ public class CartTest extends BaseClass {
 	// case 5: Verify user is able to click on checkout button
 	@Test(priority = 5, dependsOnMethods = "freeBieProduct")
 	public void checkout() {
+		StepLogger.given("User is on homepage");
+		StepLogger.when("User search for a product and select a product from search PLP");
+		StepLogger.then("User will be redirected to relevant PDP");
+		StepLogger.when("User scroll down and Click add to cart");
+		StepLogger.then("Relevant product should be added to cart");
+		StepLogger.when("User click on check-out button");
+		StepLogger.then("User shoulbe be able to view gokwik poup");
 		cartDrawer c = new cartDrawer(driver);
 		c.getCheckoutButtonCartDrawer().click();
 		c.waitUntilElementIsVisible(c.getGokwikPopup());

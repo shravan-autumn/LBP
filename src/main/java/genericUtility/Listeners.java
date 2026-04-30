@@ -17,7 +17,7 @@ public class Listeners extends BaseClass implements ITestListener {
 
 	ExtentReports extent = ExtentReport.getReportObject();
 	ExtentTest test;
-	ThreadLocal<ExtentTest> extentTest= new ThreadLocal<ExtentTest>() ;//thread safe
+	public static ThreadLocal<ExtentTest> extentTest= new ThreadLocal<ExtentTest>() ;//thread safe
 	
 
 	@Override

@@ -2,272 +2,272 @@
 <testng-results ignored="0" total="54" passed="54" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-23T16:21:00 IST" name="Suite" finished-at="2026-04-23T16:26:25 IST" duration-ms="325126">
+  <suite started-at="2026-04-30T13:05:26 IST" name="Suite" finished-at="2026-04-30T13:10:42 IST" duration-ms="316461">
     <groups>
     </groups>
-    <test started-at="2026-04-23T16:21:00 IST" name="Test" finished-at="2026-04-23T16:26:25 IST" duration-ms="325126">
+    <test started-at="2026-04-30T13:05:26 IST" name="Test" finished-at="2026-04-30T13:10:42 IST" duration-ms="316461">
       <class name="Tests.CartTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.CartTest@3119cf6f]" started-at="2026-04-23T16:25:58 IST" name="launchApplication" finished-at="2026-04-23T16:26:01 IST" duration-ms="2895" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.CartTest@129b69b2]" started-at="2026-04-30T13:10:13 IST" name="launchApplication" finished-at="2026-04-30T13:10:17 IST" duration-ms="3754" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="emptyCart()[pri:1, instance:Tests.CartTest@3119cf6f]" started-at="2026-04-23T16:26:01 IST" name="emptyCart" finished-at="2026-04-23T16:26:05 IST" duration-ms="4214" status="PASS">
+        <test-method signature="emptyCart()[pri:1, instance:Tests.CartTest@129b69b2]" started-at="2026-04-30T13:10:17 IST" name="emptyCart" finished-at="2026-04-30T13:10:22 IST" duration-ms="4862" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- emptyCart -->
-        <test-method signature="addToCartFromPDP()[pri:2, instance:Tests.CartTest@3119cf6f]" started-at="2026-04-23T16:26:05 IST" name="addToCartFromPDP" finished-at="2026-04-23T16:26:18 IST" duration-ms="13358" status="PASS">
+        <test-method signature="addToCartFromPDP()[pri:2, instance:Tests.CartTest@129b69b2]" started-at="2026-04-30T13:10:22 IST" name="addToCartFromPDP" finished-at="2026-04-30T13:10:36 IST" duration-ms="13903" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCartFromPDP -->
-        <test-method signature="priceUpdateVerification()[pri:3, instance:Tests.CartTest@3119cf6f]" started-at="2026-04-23T16:26:18 IST" name="priceUpdateVerification" finished-at="2026-04-23T16:26:20 IST" duration-ms="2064" status="PASS">
+        <test-method signature="priceUpdateVerification()[pri:3, instance:Tests.CartTest@129b69b2]" started-at="2026-04-30T13:10:36 IST" name="priceUpdateVerification" finished-at="2026-04-30T13:10:38 IST" duration-ms="2068" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- priceUpdateVerification -->
-        <test-method signature="freeBieProduct()[pri:4, instance:Tests.CartTest@3119cf6f]" started-at="2026-04-23T16:26:20 IST" name="freeBieProduct" finished-at="2026-04-23T16:26:21 IST" duration-ms="48" status="PASS">
+        <test-method signature="freeBieProduct()[pri:4, instance:Tests.CartTest@129b69b2]" started-at="2026-04-30T13:10:38 IST" name="freeBieProduct" finished-at="2026-04-30T13:10:38 IST" duration-ms="65" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- freeBieProduct -->
-        <test-method signature="checkout()[pri:5, instance:Tests.CartTest@3119cf6f]" started-at="2026-04-23T16:26:21 IST" name="checkout" finished-at="2026-04-23T16:26:25 IST" depends-on-methods="Tests.CartTest.freeBieProduct" duration-ms="4203" status="PASS">
+        <test-method signature="checkout()[pri:5, instance:Tests.CartTest@129b69b2]" started-at="2026-04-30T13:10:38 IST" name="checkout" finished-at="2026-04-30T13:10:42 IST" depends-on-methods="Tests.CartTest.freeBieProduct" duration-ms="4136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkout -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.CartTest@3119cf6f]" started-at="2026-04-23T16:26:25 IST" name="teardown" finished-at="2026-04-23T16:26:25 IST" duration-ms="252" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.CartTest@129b69b2]" started-at="2026-04-30T13:10:42 IST" name="teardown" finished-at="2026-04-30T13:10:42 IST" duration-ms="327" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Tests.CartTest -->
       <class name="Tests.LoginpageTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.LoginpageTest@161aa04a]" started-at="2026-04-23T16:21:00 IST" name="launchApplication" finished-at="2026-04-23T16:21:04 IST" duration-ms="4428" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.LoginpageTest@ca2be53]" started-at="2026-04-30T13:05:26 IST" name="launchApplication" finished-at="2026-04-30T13:05:31 IST" duration-ms="4806" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="loginPageNavigation()[pri:1, instance:Tests.LoginpageTest@161aa04a]" started-at="2026-04-23T16:21:04 IST" name="loginPageNavigation" finished-at="2026-04-23T16:21:09 IST" duration-ms="4688" status="PASS">
+        <test-method signature="loginPageNavigation()[pri:1, instance:Tests.LoginpageTest@ca2be53]" started-at="2026-04-30T13:05:31 IST" name="loginPageNavigation" finished-at="2026-04-30T13:05:36 IST" duration-ms="4777" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPageNavigation -->
-        <test-method signature="createAccount()[pri:2, instance:Tests.LoginpageTest@161aa04a]" started-at="2026-04-23T16:21:09 IST" name="createAccount" finished-at="2026-04-23T16:21:23 IST" duration-ms="14160" status="PASS">
+        <test-method signature="createAccount()[pri:2, instance:Tests.LoginpageTest@ca2be53]" started-at="2026-04-30T13:05:36 IST" name="createAccount" finished-at="2026-04-30T13:05:48 IST" duration-ms="12125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAccount -->
-        <test-method signature="login()[pri:3, instance:Tests.LoginpageTest@161aa04a]" started-at="2026-04-23T16:21:23 IST" name="login" finished-at="2026-04-23T16:21:36 IST" depends-on-methods="Tests.LoginpageTest.createAccount" duration-ms="12648" status="PASS">
+        <test-method signature="login()[pri:3, instance:Tests.LoginpageTest@ca2be53]" started-at="2026-04-30T13:05:48 IST" name="login" finished-at="2026-04-30T13:06:04 IST" depends-on-methods="Tests.LoginpageTest.createAccount" duration-ms="15711" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.LoginpageTest@161aa04a]" started-at="2026-04-23T16:21:36 IST" name="teardown" finished-at="2026-04-23T16:21:36 IST" duration-ms="351" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.LoginpageTest@ca2be53]" started-at="2026-04-30T13:06:04 IST" name="teardown" finished-at="2026-04-30T13:06:04 IST" duration-ms="418" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Tests.LoginpageTest -->
       <class name="Tests.ProductlistingpageTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-04-23T16:24:24 IST" name="launchApplication" finished-at="2026-04-23T16:24:28 IST" duration-ms="3431" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.ProductlistingpageTest@2e0652ab]" started-at="2026-04-30T13:08:56 IST" name="launchApplication" finished-at="2026-04-30T13:09:00 IST" duration-ms="4254" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="hpToPlpNavigation()[pri:1, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-04-23T16:24:28 IST" name="hpToPlpNavigation" finished-at="2026-04-23T16:24:33 IST" duration-ms="5532" status="PASS">
+        <test-method signature="hpToPlpNavigation()[pri:1, instance:Tests.ProductlistingpageTest@2e0652ab]" started-at="2026-04-30T13:09:00 IST" name="hpToPlpNavigation" finished-at="2026-04-30T13:09:06 IST" duration-ms="5894" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- hpToPlpNavigation -->
-        <test-method signature="appliedFilters()[pri:2, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-04-23T16:24:33 IST" name="appliedFilters" finished-at="2026-04-23T16:25:02 IST" duration-ms="28774" status="PASS">
+        <test-method signature="appliedFilters()[pri:2, instance:Tests.ProductlistingpageTest@2e0652ab]" started-at="2026-04-30T13:09:06 IST" name="appliedFilters" finished-at="2026-04-30T13:09:14 IST" duration-ms="7981" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- appliedFilters -->
-        <test-method signature="filteredproducts()[pri:3, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-04-23T16:25:02 IST" name="filteredproducts" finished-at="2026-04-23T16:25:06 IST" duration-ms="3573" status="PASS">
+        <test-method signature="filteredproducts()[pri:3, instance:Tests.ProductlistingpageTest@2e0652ab]" started-at="2026-04-30T13:09:14 IST" name="filteredproducts" finished-at="2026-04-30T13:09:18 IST" duration-ms="3827" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filteredproducts -->
-        <test-method signature="clearFilters()[pri:4, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-04-23T16:25:06 IST" name="clearFilters" finished-at="2026-04-23T16:25:10 IST" duration-ms="4667" status="PASS">
+        <test-method signature="clearFilters()[pri:4, instance:Tests.ProductlistingpageTest@2e0652ab]" started-at="2026-04-30T13:09:18 IST" name="clearFilters" finished-at="2026-04-30T13:09:22 IST" duration-ms="4326" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clearFilters -->
-        <test-method signature="addToCartFromPLP()[pri:5, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-04-23T16:25:10 IST" name="addToCartFromPLP" finished-at="2026-04-23T16:25:16 IST" duration-ms="5179" status="PASS">
+        <test-method signature="addToCartFromPLP()[pri:5, instance:Tests.ProductlistingpageTest@2e0652ab]" started-at="2026-04-30T13:09:22 IST" name="addToCartFromPLP" finished-at="2026-04-30T13:09:28 IST" duration-ms="5347" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCartFromPLP -->
-        <test-method signature="youMayAlsoLikeSection()[pri:6, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-04-23T16:25:16 IST" name="youMayAlsoLikeSection" finished-at="2026-04-23T16:25:16 IST" duration-ms="680" status="PASS">
+        <test-method signature="youMayAlsoLikeSection()[pri:6, instance:Tests.ProductlistingpageTest@2e0652ab]" started-at="2026-04-30T13:09:28 IST" name="youMayAlsoLikeSection" finished-at="2026-04-30T13:09:28 IST" duration-ms="784" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- youMayAlsoLikeSection -->
-        <test-method signature="beautyArchivesSection()[pri:7, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-04-23T16:25:16 IST" name="beautyArchivesSection" finished-at="2026-04-23T16:25:17 IST" duration-ms="352" status="PASS">
+        <test-method signature="beautyArchivesSection()[pri:7, instance:Tests.ProductlistingpageTest@2e0652ab]" started-at="2026-04-30T13:09:28 IST" name="beautyArchivesSection" finished-at="2026-04-30T13:09:29 IST" duration-ms="355" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beautyArchivesSection -->
-        <test-method signature="viewAllRedirection()[pri:8, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-04-23T16:25:17 IST" name="viewAllRedirection" finished-at="2026-04-23T16:25:18 IST" duration-ms="1876" status="PASS">
+        <test-method signature="viewAllRedirection()[pri:8, instance:Tests.ProductlistingpageTest@2e0652ab]" started-at="2026-04-30T13:09:29 IST" name="viewAllRedirection" finished-at="2026-04-30T13:09:31 IST" duration-ms="2090" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- viewAllRedirection -->
-        <test-method signature="faqsSection()[pri:9, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-04-23T16:25:18 IST" name="faqsSection" finished-at="2026-04-23T16:25:19 IST" duration-ms="508" status="PASS">
+        <test-method signature="faqsSection()[pri:9, instance:Tests.ProductlistingpageTest@2e0652ab]" started-at="2026-04-30T13:09:31 IST" name="faqsSection" finished-at="2026-04-30T13:09:31 IST" duration-ms="528" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- faqsSection -->
-        <test-method signature="writeToUsRedirection()[pri:10, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-04-23T16:25:19 IST" name="writeToUsRedirection" finished-at="2026-04-23T16:25:21 IST" duration-ms="1710" status="PASS">
+        <test-method signature="writeToUsRedirection()[pri:10, instance:Tests.ProductlistingpageTest@2e0652ab]" started-at="2026-04-30T13:09:31 IST" name="writeToUsRedirection" finished-at="2026-04-30T13:09:33 IST" duration-ms="1813" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- writeToUsRedirection -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-04-23T16:25:21 IST" name="teardown" finished-at="2026-04-23T16:25:21 IST" duration-ms="304" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.ProductlistingpageTest@2e0652ab]" started-at="2026-04-30T13:09:33 IST" name="teardown" finished-at="2026-04-30T13:09:33 IST" duration-ms="298" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Tests.ProductlistingpageTest -->
       <class name="Tests.ProductdetaislTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-04-23T16:25:21 IST" name="launchApplication" finished-at="2026-04-23T16:25:24 IST" duration-ms="3197" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.ProductdetaislTest@22c29aa8]" started-at="2026-04-30T13:09:33 IST" name="launchApplication" finished-at="2026-04-30T13:09:38 IST" duration-ms="4438" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="hpToPdpNavigation()[pri:1, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-04-23T16:25:24 IST" name="hpToPdpNavigation" finished-at="2026-04-23T16:25:31 IST" duration-ms="6578" status="PASS">
+        <test-method signature="hpToPdpNavigation()[pri:1, instance:Tests.ProductdetaislTest@22c29aa8]" started-at="2026-04-30T13:09:38 IST" name="hpToPdpNavigation" finished-at="2026-04-30T13:09:44 IST" duration-ms="6409" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- hpToPdpNavigation -->
-        <test-method signature="pdpToPlpNavigation()[pri:2, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-04-23T16:25:31 IST" name="pdpToPlpNavigation" finished-at="2026-04-23T16:25:36 IST" duration-ms="5493" status="PASS">
+        <test-method signature="pdpToPlpNavigation()[pri:2, instance:Tests.ProductdetaislTest@22c29aa8]" started-at="2026-04-30T13:09:44 IST" name="pdpToPlpNavigation" finished-at="2026-04-30T13:09:50 IST" duration-ms="5726" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pdpToPlpNavigation -->
-        <test-method signature="invalidPincodeCheck()[pri:3, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-04-23T16:25:36 IST" name="invalidPincodeCheck" finished-at="2026-04-23T16:25:38 IST" duration-ms="1213" status="PASS">
+        <test-method signature="invalidPincodeCheck()[pri:3, instance:Tests.ProductdetaislTest@22c29aa8]" started-at="2026-04-30T13:09:50 IST" name="invalidPincodeCheck" finished-at="2026-04-30T13:09:52 IST" duration-ms="1803" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidPincodeCheck -->
-        <test-method signature="validPincodeCheck()[pri:4, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-04-23T16:25:38 IST" name="validPincodeCheck" finished-at="2026-04-23T16:25:39 IST" duration-ms="1077" status="PASS">
+        <test-method signature="validPincodeCheck()[pri:4, instance:Tests.ProductdetaislTest@22c29aa8]" started-at="2026-04-30T13:09:52 IST" name="validPincodeCheck" finished-at="2026-04-30T13:09:53 IST" duration-ms="1246" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validPincodeCheck -->
-        <test-method signature="addToCartFromPDP()[pri:5, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-04-23T16:25:39 IST" name="addToCartFromPDP" finished-at="2026-04-23T16:25:41 IST" duration-ms="2895" status="PASS">
+        <test-method signature="addToCartFromPDP()[pri:5, instance:Tests.ProductdetaislTest@22c29aa8]" started-at="2026-04-30T13:09:53 IST" name="addToCartFromPDP" finished-at="2026-04-30T13:09:56 IST" duration-ms="3183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCartFromPDP -->
-        <test-method signature="quantityIncrease()[pri:6, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-04-23T16:25:41 IST" name="quantityIncrease" finished-at="2026-04-23T16:25:46 IST" duration-ms="4371" status="PASS">
+        <test-method signature="quantityIncrease()[pri:6, instance:Tests.ProductdetaislTest@22c29aa8]" started-at="2026-04-30T13:09:56 IST" name="quantityIncrease" finished-at="2026-04-30T13:10:01 IST" duration-ms="4587" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quantityIncrease -->
-        <test-method signature="quantityDecrease()[pri:7, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-04-23T16:25:46 IST" name="quantityDecrease" finished-at="2026-04-23T16:25:50 IST" depends-on-methods="Tests.ProductdetaislTest.quantityIncrease" duration-ms="4497" status="PASS">
+        <test-method signature="quantityDecrease()[pri:7, instance:Tests.ProductdetaislTest@22c29aa8]" started-at="2026-04-30T13:10:01 IST" name="quantityDecrease" finished-at="2026-04-30T13:10:06 IST" depends-on-methods="Tests.ProductdetaislTest.quantityIncrease" duration-ms="4709" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quantityDecrease -->
-        <test-method signature="reviewsSection()[pri:8, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-04-23T16:25:50 IST" name="reviewsSection" finished-at="2026-04-23T16:25:53 IST" duration-ms="2354" status="PASS">
+        <test-method signature="reviewsSection()[pri:8, instance:Tests.ProductdetaislTest@22c29aa8]" started-at="2026-04-30T13:10:06 IST" name="reviewsSection" finished-at="2026-04-30T13:10:08 IST" duration-ms="2398" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reviewsSection -->
-        <test-method signature="detailsSection()[pri:9, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-04-23T16:25:53 IST" name="detailsSection" finished-at="2026-04-23T16:25:55 IST" duration-ms="2350" status="PASS">
+        <test-method signature="detailsSection()[pri:9, instance:Tests.ProductdetaislTest@22c29aa8]" started-at="2026-04-30T13:10:08 IST" name="detailsSection" finished-at="2026-04-30T13:10:10 IST" duration-ms="2411" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- detailsSection -->
-        <test-method signature="youMayAlsoLikeSectionPDP()[pri:10, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-04-23T16:25:55 IST" name="youMayAlsoLikeSectionPDP" finished-at="2026-04-23T16:25:57 IST" duration-ms="2367" status="PASS">
+        <test-method signature="youMayAlsoLikeSectionPDP()[pri:10, instance:Tests.ProductdetaislTest@22c29aa8]" started-at="2026-04-30T13:10:10 IST" name="youMayAlsoLikeSectionPDP" finished-at="2026-04-30T13:10:13 IST" duration-ms="2419" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- youMayAlsoLikeSectionPDP -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-04-23T16:25:57 IST" name="teardown" finished-at="2026-04-23T16:25:58 IST" duration-ms="470" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.ProductdetaislTest@22c29aa8]" started-at="2026-04-30T13:10:13 IST" name="teardown" finished-at="2026-04-30T13:10:13 IST" duration-ms="430" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Tests.ProductdetaislTest -->
       <class name="Tests.HomepageTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:21:36 IST" name="launchApplication" finished-at="2026-04-23T16:21:40 IST" duration-ms="3312" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:06:04 IST" name="launchApplication" finished-at="2026-04-30T13:06:08 IST" duration-ms="3572" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="logoVerification()[pri:1, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:21:40 IST" name="logoVerification" finished-at="2026-04-23T16:21:41 IST" duration-ms="1481" status="PASS">
+        <test-method signature="logoVerification()[pri:1, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:06:08 IST" name="logoVerification" finished-at="2026-04-30T13:06:09 IST" duration-ms="1612" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoVerification -->
-        <test-method signature="announcementBarNavigation()[pri:2, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:21:41 IST" name="announcementBarNavigation" finished-at="2026-04-23T16:21:45 IST" duration-ms="3513" status="PASS">
+        <test-method signature="announcementBarNavigation()[pri:2, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:06:09 IST" name="announcementBarNavigation" finished-at="2026-04-30T13:06:12 IST" duration-ms="3374" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- announcementBarNavigation -->
-        <test-method signature="megamenuNavigation()[pri:3, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:21:45 IST" name="megamenuNavigation" finished-at="2026-04-23T16:21:48 IST" duration-ms="3540" status="PASS">
+        <test-method signature="megamenuNavigation()[pri:3, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:06:13 IST" name="megamenuNavigation" finished-at="2026-04-30T13:06:16 IST" duration-ms="3130" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- megamenuNavigation -->
-        <test-method signature="aboutUsPageNavigation()[pri:4, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:21:48 IST" name="aboutUsPageNavigation" finished-at="2026-04-23T16:21:51 IST" duration-ms="2518" status="PASS">
+        <test-method signature="aboutUsPageNavigation()[pri:4, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:06:16 IST" name="aboutUsPageNavigation" finished-at="2026-04-30T13:06:17 IST" duration-ms="1626" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aboutUsPageNavigation -->
-        <test-method signature="knowYourIngredientsPageNavigation()[pri:5, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:21:51 IST" name="knowYourIngredientsPageNavigation" finished-at="2026-04-23T16:21:52 IST" duration-ms="1362" status="PASS">
+        <test-method signature="knowYourIngredientsPageNavigation()[pri:5, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:06:17 IST" name="knowYourIngredientsPageNavigation" finished-at="2026-04-30T13:06:19 IST" duration-ms="1303" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- knowYourIngredientsPageNavigation -->
-        <test-method signature="beautyArchivesPageNavigation()[pri:6, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:21:52 IST" name="beautyArchivesPageNavigation" finished-at="2026-04-23T16:21:54 IST" duration-ms="1648" status="PASS">
+        <test-method signature="beautyArchivesPageNavigation()[pri:6, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:06:19 IST" name="beautyArchivesPageNavigation" finished-at="2026-04-30T13:06:20 IST" duration-ms="1770" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beautyArchivesPageNavigation -->
-        <test-method signature="contactUsPageNavigation()[pri:7, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:21:54 IST" name="contactUsPageNavigation" finished-at="2026-04-23T16:21:55 IST" duration-ms="1601" status="PASS">
+        <test-method signature="contactUsPageNavigation()[pri:7, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:06:20 IST" name="contactUsPageNavigation" finished-at="2026-04-30T13:06:22 IST" duration-ms="1619" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- contactUsPageNavigation -->
-        <test-method signature="verifyHeroBannerLinkNavigation()[pri:8, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:21:55 IST" name="verifyHeroBannerLinkNavigation" finished-at="2026-04-23T16:21:57 IST" duration-ms="1683" status="PASS">
+        <test-method signature="verifyHeroBannerLinkNavigation()[pri:8, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:06:22 IST" name="verifyHeroBannerLinkNavigation" finished-at="2026-04-30T13:06:24 IST" duration-ms="1643" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHeroBannerLinkNavigation -->
-        <test-method signature="verifyCollectionTabsNavigation()[pri:9, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:21:57 IST" name="verifyCollectionTabsNavigation" finished-at="2026-04-23T16:22:11 IST" duration-ms="13849" status="PASS">
+        <test-method signature="verifyCollectionTabsNavigation()[pri:9, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:06:24 IST" name="verifyCollectionTabsNavigation" finished-at="2026-04-30T13:06:39 IST" duration-ms="15124" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCollectionTabsNavigation -->
-        <test-method signature="verifyProductNavigationFromCollectionTab()[pri:10, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:22:11 IST" name="verifyProductNavigationFromCollectionTab" finished-at="2026-04-23T16:22:16 IST" duration-ms="5237" status="PASS">
+        <test-method signature="verifyProductNavigationFromCollectionTab()[pri:10, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:06:39 IST" name="verifyProductNavigationFromCollectionTab" finished-at="2026-04-30T13:06:45 IST" duration-ms="5750" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyProductNavigationFromCollectionTab -->
-        <test-method signature="verifyAddToCartFunctionality()[pri:12, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:22:16 IST" name="verifyAddToCartFunctionality" finished-at="2026-04-23T16:22:27 IST" duration-ms="10875" status="PASS">
+        <test-method signature="verifyAddToCartFunctionality()[pri:12, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:06:45 IST" name="verifyAddToCartFunctionality" finished-at="2026-04-30T13:06:56 IST" duration-ms="11547" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddToCartFunctionality -->
-        <test-method signature="verifyShopByConcernSection()[pri:13, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:22:27 IST" name="verifyShopByConcernSection" finished-at="2026-04-23T16:22:40 IST" duration-ms="12680" status="PASS">
+        <test-method signature="verifyShopByConcernSection()[pri:13, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:06:56 IST" name="verifyShopByConcernSection" finished-at="2026-04-30T13:07:09 IST" duration-ms="12648" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyShopByConcernSection -->
-        <test-method signature="verifyDiscoverBeautyBillSection()[pri:14, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:22:40 IST" name="verifyDiscoverBeautyBillSection" finished-at="2026-04-23T16:22:41 IST" duration-ms="1712" status="PASS">
+        <test-method signature="verifyDiscoverBeautyBillSection()[pri:14, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:07:09 IST" name="verifyDiscoverBeautyBillSection" finished-at="2026-04-30T13:07:10 IST" duration-ms="1635" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDiscoverBeautyBillSection -->
-        <test-method signature="verifyInTheSpotlightSection()[pri:15, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:22:41 IST" name="verifyInTheSpotlightSection" finished-at="2026-04-23T16:22:49 IST" duration-ms="7884" status="PASS">
+        <test-method signature="verifyInTheSpotlightSection()[pri:15, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:07:10 IST" name="verifyInTheSpotlightSection" finished-at="2026-04-30T13:07:19 IST" duration-ms="8877" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInTheSpotlightSection -->
-        <test-method signature="verifyWhatSetsUsApartSection()[pri:16, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:22:49 IST" name="verifyWhatSetsUsApartSection" finished-at="2026-04-23T16:22:53 IST" duration-ms="3948" status="PASS">
+        <test-method signature="verifyWhatSetsUsApartSection()[pri:16, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:07:19 IST" name="verifyWhatSetsUsApartSection" finished-at="2026-04-30T13:07:23 IST" duration-ms="4029" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyWhatSetsUsApartSection -->
-        <test-method signature="verifyReelsSection()[pri:17, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:22:53 IST" name="verifyReelsSection" finished-at="2026-04-23T16:22:54 IST" duration-ms="519" status="PASS">
+        <test-method signature="verifyReelsSection()[pri:17, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:07:23 IST" name="verifyReelsSection" finished-at="2026-04-30T13:07:24 IST" duration-ms="446" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyReelsSection -->
-        <test-method signature="verifyCustomerLoveSection()[pri:18, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:22:54 IST" name="verifyCustomerLoveSection" finished-at="2026-04-23T16:22:54 IST" duration-ms="412" status="PASS">
+        <test-method signature="verifyCustomerLoveSection()[pri:18, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:07:24 IST" name="verifyCustomerLoveSection" finished-at="2026-04-30T13:07:24 IST" duration-ms="480" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCustomerLoveSection -->
-        <test-method signature="verifyDiscoverOurStorySection()[pri:19, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:22:54 IST" name="verifyDiscoverOurStorySection" finished-at="2026-04-23T16:22:57 IST" duration-ms="2711" status="PASS">
+        <test-method signature="verifyDiscoverOurStorySection()[pri:19, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:07:24 IST" name="verifyDiscoverOurStorySection" finished-at="2026-04-30T13:07:27 IST" duration-ms="2334" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDiscoverOurStorySection -->
-        <test-method signature="verifyBeautyArchivesSection()[pri:20, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:22:57 IST" name="verifyBeautyArchivesSection" finished-at="2026-04-23T16:23:01 IST" duration-ms="4206" status="PASS">
+        <test-method signature="verifyBeautyArchivesSection()[pri:20, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:07:27 IST" name="verifyBeautyArchivesSection" finished-at="2026-04-30T13:07:31 IST" duration-ms="4402" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyBeautyArchivesSection -->
-        <test-method signature="verifyNewsletterSubscription()[pri:21, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:23:01 IST" name="verifyNewsletterSubscription" finished-at="2026-04-23T16:23:11 IST" duration-ms="10170" status="PASS">
+        <test-method signature="verifyNewsletterSubscription()[pri:21, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:07:31 IST" name="verifyNewsletterSubscription" finished-at="2026-04-30T13:07:40 IST" duration-ms="8651" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNewsletterSubscription -->
-        <test-method signature="verifyFooterProductLinks()[pri:22, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:23:11 IST" name="verifyFooterProductLinks" finished-at="2026-04-23T16:23:32 IST" duration-ms="20594" status="PASS">
+        <test-method signature="verifyFooterProductLinks()[pri:22, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:07:40 IST" name="verifyFooterProductLinks" finished-at="2026-04-30T13:07:58 IST" duration-ms="18649" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFooterProductLinks -->
-        <test-method signature="verifyFooterConcernLinks()[pri:23, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:23:32 IST" name="verifyFooterConcernLinks" finished-at="2026-04-23T16:23:50 IST" duration-ms="17793" status="PASS">
+        <test-method signature="verifyFooterConcernLinks()[pri:23, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:07:58 IST" name="verifyFooterConcernLinks" finished-at="2026-04-30T13:08:18 IST" duration-ms="19518" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFooterConcernLinks -->
-        <test-method signature="verifyFooterQuickLinks()[pri:24, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:23:50 IST" name="verifyFooterQuickLinks" finished-at="2026-04-23T16:24:03 IST" duration-ms="13312" status="PASS">
+        <test-method signature="verifyFooterQuickLinks()[pri:24, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:08:18 IST" name="verifyFooterQuickLinks" finished-at="2026-04-30T13:08:33 IST" duration-ms="14719" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFooterQuickLinks -->
-        <test-method signature="verifyFooterLegalLinks()[pri:25, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:24:03 IST" name="verifyFooterLegalLinks" finished-at="2026-04-23T16:24:16 IST" duration-ms="13378" status="PASS">
+        <test-method signature="verifyFooterLegalLinks()[pri:25, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:08:33 IST" name="verifyFooterLegalLinks" finished-at="2026-04-30T13:08:47 IST" duration-ms="14743" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFooterLegalLinks -->
-        <test-method signature="verifyFooterSocialMediaLinks()[pri:26, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:24:16 IST" name="verifyFooterSocialMediaLinks" finished-at="2026-04-23T16:24:24 IST" duration-ms="7275" status="PASS">
+        <test-method signature="verifyFooterSocialMediaLinks()[pri:26, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:08:47 IST" name="verifyFooterSocialMediaLinks" finished-at="2026-04-30T13:08:55 IST" duration-ms="7839" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFooterSocialMediaLinks -->
-        <test-method signature="verifyCautionNotice()[pri:27, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:24:24 IST" name="verifyCautionNotice" finished-at="2026-04-23T16:24:24 IST" duration-ms="368" status="PASS">
+        <test-method signature="verifyCautionNotice()[pri:27, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:08:55 IST" name="verifyCautionNotice" finished-at="2026-04-30T13:08:55 IST" duration-ms="369" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCautionNotice -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-04-23T16:24:24 IST" name="teardown" finished-at="2026-04-23T16:24:24 IST" duration-ms="395" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.HomepageTest@70ee1963]" started-at="2026-04-30T13:08:55 IST" name="teardown" finished-at="2026-04-30T13:08:56 IST" duration-ms="455" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

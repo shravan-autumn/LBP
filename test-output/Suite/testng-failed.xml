@@ -6,16 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Tests.ProductlistingpageTest">
+      <class name="Tests.ProductdetaislTest">
         <methods>
           <include name="launchApplication"/>
-          <include name="viewAllRedirection"/>
           <include name="teardown"/>
-          <include name="addToCartFromPLP"/>
-          <include name="writeToUsRedirection"/>
-          <include name="appliedFilters"/>
+          <include name="invalidPincodeCheck"/>
         </methods>
-      </class> <!-- Tests.ProductlistingpageTest -->
+      </class> <!-- Tests.ProductdetaislTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

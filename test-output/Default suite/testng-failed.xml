@@ -3,22 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Tests.ProductdetaislTest">
+      <class name="Tests.CartTest">
         <methods>
+          <include name="priceUpdateVerification"/>
           <include name="launchApplication"/>
-          <include name="quantityDecrease"/>
           <include name="teardown"/>
-          <include name="quantityIncrease"/>
-          <include name="detailsSection"/>
-          <include name="validPincodeCheck"/>
+          <include name="freeBieProduct"/>
+          <include name="emptyCart"/>
           <include name="addToCartFromPDP"/>
-          <include name="reviewsSection"/>
-          <include name="hpToPdpNavigation"/>
-          <include name="invalidPincodeCheck"/>
-          <include name="pdpToPlpNavigation"/>
-          <include name="youMayAlsoLikeSectionPDP"/>
+          <include name="checkout"/>
         </methods>
-      </class> <!-- Tests.ProductdetaislTest -->
+      </class> <!-- Tests.CartTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

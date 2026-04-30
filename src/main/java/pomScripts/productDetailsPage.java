@@ -45,7 +45,7 @@ public class productDetailsPage {
 	private WebElement pincodeTextField;
 	@FindBy(xpath = "//button[@class='submit-pincode-button']")
 	private WebElement checkButton;
-	@FindBy(xpath = "//p[text()='Please enter a valid pincode']")
+	@FindBy(xpath = "//div[@class='pincode-response-container']//p")
 	private WebElement invalidPincodeErrorMessage;
 	@FindBy(xpath = "//p[@id='order-timeline']")
 	private WebElement validPincodeErrorMessage;
@@ -245,6 +245,7 @@ public class productDetailsPage {
 		getPincodeTextField().sendKeys("123456");
 		getCheckButton().click();
 		webdriverUtility.toScrollToElement(getAddToCartButton(), driver);
+		webdriverUtility.waitUntilElementIsVisible(invalidPincodeErrorMessage);
 	}
 
 	public void validPincode() {
